@@ -32,6 +32,8 @@ Content Management: to automate content publishing and management tasks for webs
 
 Education and Training: Some educators and trainers use Jenkins for teaching purposes, demonstrating how automation can improve workflow and productivity.
 
+ git clone git@github.com:LinkedInLearning/learning-jenkins-3003221.git
+
 
 https://www.jenkins.io/doc/
 https://www.cloudbees.com/jenkins/what-is-jenkins
