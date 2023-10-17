@@ -57,4 +57,4 @@ Education and Training: Some educators and trainers use Jenkins for teaching pur
 
 
 Gitlab
-https://about.gitlab.com/solutions/jenkins/
+- [ ] https://about.gitlab.com/solutions/jenkins/
