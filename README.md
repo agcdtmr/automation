@@ -1,5 +1,9 @@
 # learn-jenkins
 
+By learning Jenkins I'm following this Linkedin Learning course: https://www.linkedin.com/learning/learning-jenkins-14423877
+
+
+
 ## Types of jobs and roles that commonly use Jenkins:
 
 Software Developers: to automate the building, testing, and deployment of their applications. It helps developers catch and fix issues early in the development process.
@@ -150,6 +154,7 @@ When you fork a repository on GitHub, it doesn't automatically fork all of the b
 
 Repeat the process for each branch you want to fork from the original repository. By adding the original repository as a remote and fetching its branches, you can work on any branch from the original repository within your fork.
 
+## Sources
 
 - [ ] https://www.jenkins.io/doc/
 - [ ] https://www.cloudbees.com/jenkins/what-is-jenkins
