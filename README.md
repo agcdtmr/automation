@@ -100,6 +100,56 @@ Error fixing:
 
 - First I was trying to clone the main repo and not the one I forked.
 
+## how to fork a repo with all the branches
+
+When you fork a repository on GitHub, it doesn't automatically fork all of the branches. By default, a fork of a repository will only contain the default branch (usually "main" or "master"). However, you can fork individual branches from the original repository into your fork. Here's how you can do it:
+
+1. **Fork the Repository:**
+   First, fork the repository you're interested in. Go to the repository on GitHub and click the "Fork" button in the top right corner. This will create a copy of the repository in your GitHub account.
+
+2. **Clone Your Fork:**
+   After forking, clone your forked repository to your local machine using the `git clone` command. Replace `<your-fork-url>` with the URL of your forked repository:
+
+   ```bash
+   git clone <your-fork-url>
+   ```
+
+3. **Add the Original Repository as a Remote:**
+   To fetch branches from the original repository, you need to add it as a remote. Replace `<original-repo-url>` with the URL of the original repository:
+
+   ```bash
+   git remote add upstream <original-repo-url>
+   ```
+
+4. **Fetch All Branches from the Original Repository:**
+   To fetch all branches from the original repository, use the following command:
+
+   ```bash
+   git fetch upstream
+   ```
+
+   This will fetch all branches from the original repository into your local fork.
+
+5. **Checkout a Branch from the Original Repository:**
+   Once you've fetched the branches, you can check out a branch from the original repository to work on it. For example, if you want to work on a branch named `feature-branch`:
+
+   ```bash
+   git checkout -b feature-branch upstream/feature-branch
+   ```
+
+   This will create and switch to a new branch in your local fork that is based on the `feature-branch` from the original repository.
+
+6. **Push the New Branch to Your Fork:**
+   After making changes to the branch, you can push it to your fork on GitHub:
+
+   ```bash
+   git push origin feature-branch
+   ```
+
+   This will make the changes available in your fork on GitHub.
+
+Repeat the process for each branch you want to fork from the original repository. By adding the original repository as a remote and fetching its branches, you can work on any branch from the original repository within your fork.
+
 
 - [ ] https://www.jenkins.io/doc/
 - [ ] https://www.cloudbees.com/jenkins/what-is-jenkins
