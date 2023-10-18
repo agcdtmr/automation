@@ -39,9 +39,62 @@ Education and Training: Some educators and trainers use Jenkins for teaching pur
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
 
+To create an SSH key, add it to your `ssh-agent`, and then add the key to your GitHub account, follow these steps:
+
+1. **Generate an SSH Key:**
+
+   On your local machine, open a terminal or command prompt and generate an SSH key using the `ssh-keygen` command. Replace `your_email@example.com` with your GitHub-associated email address.
+
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+
+   You can also use the `-t rsa` option if you prefer RSA keys, but it's recommended to use ed25519 for better security.
+
+   The command will prompt you to choose a location to save the key, and you can press Enter to use the default location (`~/.ssh/id_ed25519`).
+
+2. **Start the ssh-agent:**
+
+   If you're using macOS or Linux, you can start the `ssh-agent` as follows:
+
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
+
+   If you're using Windows, you can use the Git Bash terminal or PowerShell, and the `ssh-agent` should be started automatically when you install Git.
+
+3. **Add Your SSH Key to ssh-agent:**
+
+   Add your SSH key to the `ssh-agent` using the `ssh-add` command. If you used a different filename for your SSH key, replace `~/.ssh/id_ed25519` with the path to your SSH private key file.
+
+   ```bash
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
+4. **Copy Your SSH Public Key:**
+
+   Use the following command to copy the public key to your clipboard. Replace `~/.ssh/id_ed25519.pub` with the path to your public key if it's different.
+
+   ```bash
+   pbcopy < ~/.ssh/id_ed25519.pub  # macOS only
+   ```
+
+   If you're on Windows or using a different clipboard manager, you may need to manually copy the contents of `~/.ssh/id_ed25519.pub`.
+
+5. **Add Your SSH Key to GitHub:**
+
+   - Log in to your GitHub account.
+   - Click on your profile picture in the upper-right corner and go to "Settings."
+   - In the left sidebar, click on "SSH and GPG keys."
+   - Click the "New SSH key" button.
+   - Give your SSH key a title (e.g., "My SSH Key") and paste the copied public key into the "Key" field.
+   - Click "Add SSH key."
+
+Your SSH key is now added to your GitHub account, and you can use it to authenticate when interacting with GitHub repositories. Make sure you keep your private key secure and do not share it with others.
+
 ## Cloning the forked learning-jenkins repo
 
-It seems that there might be an issue with your SSH key configuration and Git is unable to find the SSH key or the SSH configuration file. Let's address this issue step by step:
+The was an issue with my SSH key configuration and Git is unable to find the SSH key or the SSH configuration file while I'm checking if the forking/cloning was successful. I address this issue step by step:
 
 1. **SSH Key and Configuration File Paths:**
    First, make sure that your SSH key (`id_ed25519`) and your SSH configuration file (`config`) are in the correct locations. Typically, your SSH key should be in `~/.ssh/id_ed25519`, and your SSH configuration file should be in `~/.ssh/config`. You can use the following commands to check if they exist in the right locations:
