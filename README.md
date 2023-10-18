@@ -32,7 +32,71 @@ Content Management: to automate content publishing and management tasks for webs
 
 Education and Training: Some educators and trainers use Jenkins for teaching purposes, demonstrating how automation can improve workflow and productivity.
 
- git clone git@github.com:LinkedInLearning/learning-jenkins-3003221.git
+
+## Cloning the forked learning-jenkins repo
+
+It seems that there might be an issue with your SSH key configuration and Git is unable to find the SSH key or the SSH configuration file. Let's address this issue step by step:
+
+1. **SSH Key and Configuration File Paths:**
+   First, make sure that your SSH key (`id_ed25519`) and your SSH configuration file (`config`) are in the correct locations. Typically, your SSH key should be in `~/.ssh/id_ed25519`, and your SSH configuration file should be in `~/.ssh/config`. You can use the following commands to check if they exist in the right locations:
+
+   ```bash
+   ls -l ~/.ssh/id_ed25519
+   ls -l ~/.ssh/config
+   ```
+
+   If these files don't exist, you need to create them or move your SSH key to the right location. If you're using a different key file, replace `id_ed25519` with the correct filename.
+
+2. **Create SSH Configuration File (if it doesn't exist):**
+   If your SSH configuration file doesn't exist, you can create it with a text editor. For example, you can use the `nano` text editor to create the file:
+
+   ```bash
+   nano ~/.ssh/config
+   ```
+
+   In the `config` file, you can specify the configuration for your SSH key. Here's a basic example:
+
+   ```
+   Host github.com
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/id_ed25519
+   ```
+
+   Save the file and exit the text editor.
+
+3. **Correct SSH Key Permissions:**
+   Ensure that your SSH key and SSH configuration file have the correct permissions. You can set the correct permissions using the following commands:
+
+   ```bash
+   chmod 600 ~/.ssh/id_ed25519
+   chmod 600 ~/.ssh/config
+   ```
+
+4. **SSH Agent and Key Addition:**
+   Make sure your SSH key is added to the SSH agent. You can add your key to the SSH agent using the following command:
+
+   ```bash
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
+5. **Check GitHub SSH Key:**
+   Ensure that the SSH public key associated with your SSH private key (`id_ed25519.pub`) is added to your GitHub account. You can do this by going to your GitHub account settings and adding the public key.
+
+6. **Test SSH Connection:**
+   After checking the above steps, you can test your SSH connection to GitHub using the following command:
+
+   ```bash
+   ssh -T git@github.com
+   ```
+
+   If everything is set up correctly, GitHub should acknowledge your connection.
+
+After following these steps, you should be able to use SSH to access your GitHub repositories without encountering the "Permission denied" error. If you continue to experience issues, double-check your SSH key setup and configuration, and ensure that it matches your GitHub account settings.
+
+Error fixing:
+
+- First I was trying to clone the main repo and not the one I forked.
 
 
 - [ ] https://www.jenkins.io/doc/
