@@ -14,6 +14,7 @@ Steps taken:
 - [x] Installing Docker and setting up the environment
 - [x] Successfully finished the course quiz and [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221). Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
+- [x] Create .gitignore file
 
 ## Terminology
 
