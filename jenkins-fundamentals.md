@@ -1,6 +1,6 @@
 # jenkins-fundamentals
-Steps taken:
 
+Steps taken:
 - [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. 
 - [x] Create ssh keys, add to ssh-agent and add to github (I needed to do this first because the linkedin learning uses github for its course module).
 - [x] Forking on Github and cloning that forked repo locally.
