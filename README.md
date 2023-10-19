@@ -17,9 +17,42 @@ Steps taken:
 
 ## Terminology
 
-- Jenkins
-- Automation
-- Cron or cron jobs
+- jenkins
+- automation
+- openjdk
+- container
+- sudo
+- root user
+- plugins
+- maven
+- job
+- build
+- build step
+- string parameter
+- choice parameters
+- boolean parameter
+- cron or cron jobs
+- pipeline as code
+- regular expression
+- stage
+
+## why i need java when installing jenkins?
+
+Jenkins is a popular open-source automation server that is primarily used for automating software development and deployment processes. Java is required when installing Jenkins for several reasons:
+
+1. Jenkins is built on Java: Jenkins itself is a Java-based application. It is a Java servlet container that runs as a web application on a Java Virtual Machine (JVM). To run Jenkins, you need to have Java installed on your server.
+
+2. Plugins and Extensions: Jenkins has a vast ecosystem of plugins and extensions that enhance its functionality. Many of these plugins are also written in Java. Java provides the runtime environment for these plugins to execute within the Jenkins server.
+
+3. Cross-platform Compatibility: Java is known for its platform independence, which means Jenkins can be run on various operating systems, such as Windows, Linux, and macOS, as long as a compatible Java runtime is available.
+
+4. Stability and Performance: Java's memory management and runtime environment help ensure the stability and performance of Jenkins. It allows Jenkins to handle continuous integration and continuous delivery tasks efficiently.
+
+5. Security: Java provides security features that are essential for running server applications like Jenkins. Java has built-in security mechanisms to control and manage access to the Jenkins server and its resources.
+
+To install Jenkins, you typically need to install Java first and make sure it is properly configured on your system. Jenkins provides installation packages for different operating systems, and these packages often come bundled with a specific version of Java to ensure compatibility. However, it's essential to ensure that you have the correct version of Java installed to run Jenkins effectively.
+
+In summary, Java is a fundamental requirement for running Jenkins because it is the underlying technology on which Jenkins is built, and it provides the necessary runtime environment and compatibility for Jenkins to operate effectively.
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
 
