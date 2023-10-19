@@ -9,7 +9,8 @@ Steps taken:
 - [x] Install Git
 - [x] Install Java
 - [x] Install Jenkins
-- [x] Follow this Linkedin Learning course: https://www.linkedin.com/learning/learning-jenkins-14423877 
+- [x] Follow this Linkedin Learning course sponsored by the company: https://www.linkedin.com/learning/learning-jenkins-14423877
+
 
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
@@ -128,11 +129,12 @@ The was an issue with my SSH key configuration and Git is unable to find the SSH
 
 After following these steps, you should be able to use SSH to access your GitHub repositories without encountering the "Permission denied" error. If you continue to experience issues, double-check your SSH key setup and configuration, and ensure that it matches your GitHub account settings.
 
-Error fixing:
 
-- First I was trying to clone the main repo and not the one I forked.
+## Error fixing: Other branch from the original repo not showing locally
 
-## How to fork a repo with all the branches
+First I was trying to clone the main repo and not the one I forked.
+
+How to fork a repo with all the branches
 
 When you fork a repository on GitHub, it doesn't automatically fork all of the branches. By default, a fork of a repository will only contain the default branch (usually "main" or "master"). However, you can fork individual branches from the original repository into your fork. Here's how you can do it:
 
@@ -182,7 +184,87 @@ When you fork a repository on GitHub, it doesn't automatically fork all of the b
 
 Repeat the process for each branch you want to fork from the original repository. By adding the original repository as a remote and fetching its branches, you can work on any branch from the original repository within your fork.
 
+## Understanding Exit 1 and Exit 0
 
+The instructor introduced an error while running a Jenkins job to show how a failure job looks like using the dashboard. I do understand the first and second line od code below. But the exit 1 not.
+
+```
+#!/bin/bash
+for i in {1..30}; do echo $i; sleep 1; done
+exit 1
+```
+
+In most Unix-like operating systems, including Linux and macOS, the exit status of a program or script is represented by an integer value, which is returned when the program or script terminates. By convention, a return status of 0 signifies success, and any non-zero status code typically indicates an error or failure.
+
+This convention allows other programs or scripts that call your script to check its exit status and determine whether it completed successfully or encountered a problem. The exact meaning of non-zero exit codes can vary depending on the program or script, and it is up to the developer to define these meanings. However, a non-zero exit status is generally used to indicate that something went wrong or an error occurred during execution.
+
+For example, in your original script, you used `exit 1` to indicate a failure. This is a common practice where a non-zero exit code (in this case, 1) is used to signal that the script did not complete successfully.
+
+By using this convention, Jenkins and other automation tools can easily determine whether a build or job was successful or not. If a build step returns a non-zero exit code, Jenkins interprets it as a failure, making it easier to identify and manage issues in your automation pipeline.
+
+
+## Error fixing: `code .` command to open the code/file on vscode not working.
+
+```
+code .
+zsh: command not found: code
+```
+
+1. Uninstalled VSCode.
+2. Reinstall VSCode.
+
+The error message you're seeing, "zsh: command not found: code vscode," suggests that the "code" command is not recognized by your Zsh shell. This typically happens when Visual Studio Code (VSCode) is not added to your system's PATH or if VSCode is not installed.
+
+Here are a few steps to resolve this issue:
+
+1. Verify that Visual Studio Code is installed:
+   Make sure that Visual Studio Code is installed on your system. You can download it from the official website: https://code.visualstudio.com/
+
+2. Add VSCode to your PATH:
+   If you've installed Visual Studio Code but it's not in your PATH, you won't be able to run it from the command line. You can add it to your PATH by modifying your shell profile configuration.
+
+   For Zsh, you can add the following line to your `~/.zshrc` file:
+
+   ```bash
+   export PATH="$PATH:/path/to/VSCode.app/Contents/Resources/app/bin"
+   ```
+
+   Replace "/path/to/VSCode.app" with the actual path to your VSCode installation. You can usually find VSCode in the "Applications" directory on macOS.
+
+3. Restart your Zsh shell:
+   After making changes to your shell configuration, you'll need to restart your Zsh session or run `source ~/.zshrc` to apply the changes.
+
+4. Test the "code" command:
+   After you've added VSCode to your PATH and restarted your shell, you should be able to use the "code" command to open Visual Studio Code from the command line.
+
+If you're still facing issues, double-check that Visual Studio Code is correctly installed, and that you've added the correct path to your shell configuration. Additionally, make sure there are no typos in the command you're trying to run.
+
+
+```
+EACCES: permission denied, unlink '/usr/local/bin/code'
+```
+
+
+The error message "EACCES: permission denied, unlink '/usr/local/bin/code'" indicates that you don't have the necessary permissions to remove or unlink the "code" binary from the "/usr/local/bin" directory, which is where VSCode is typically installed when you use the command-line installation method.
+
+To resolve this issue, you can use the "sudo" command to execute the "unlink" operation with elevated privileges. Here's how you can do it:
+
+1. Open your terminal.
+
+2. Use the "sudo" command to remove the "code" binary:
+
+   ```bash
+   sudo unlink /usr/local/bin/code
+   ```
+
+3. You might be prompted to enter your administrator password to confirm the action.
+
+4. Once the unlink operation is successful, you should be able to reinstall or update Visual Studio Code without permission issues.
+
+After unlinking, you can proceed with reinstalling or updating Visual Studio Code. If you encounter any issues during the installation or updating process, you may want to use "sudo" for those operations as well. However, use caution when using "sudo" and make sure you trust the source of the installation to avoid security risks.
+
+When I followed [this](https://www.freecodecamp.org/news/how-to-open-visual-studio-code-from-your-terminal/) again.
+A prompt pop-out "Code will now prompt with 'osascript' for Administrator privileges to install the shell command.". Then I entered the password. After following all the instructions above I was able to fix the error on the terminal, and now can use `code .` command to open code/file from terminal to vscode easily.
 
 
 ## Types of jobs and roles that commonly use Jenkins:
