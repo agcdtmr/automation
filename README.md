@@ -13,12 +13,13 @@ Steps taken:
 - [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
 - [x] Installing Docker and setting up the environment
 - [x] Successfully finished the course. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
+- [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
 
 ## Terminology
 
 - Jenkins
 - Automation
-- 
+- Cron or cron jobs
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
 
