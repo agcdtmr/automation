@@ -2,7 +2,7 @@
 
 Steps taken:
 
-- [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
+- [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. 
 - [x] Create ssh keys, add to ssh-agent and add to github (I needed to do this first because the linkedin learning uses github for its course module).
 - [x] Forking on Github and cloning that forked repo locally.
 - [x] Fork the repo with all branches. (The modules are pushed in different branches)
@@ -12,6 +12,13 @@ Steps taken:
 - [x] Install Jenkins
 - [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
 - [x] Installing Docker and setting up the environment
+- [x] Successfully finished the course. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
+
+## Terminology
+
+- Jenkins
+- Automation
+- 
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
 
