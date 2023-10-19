@@ -9,9 +9,9 @@ Steps taken:
 - [x] Install Git
 - [x] Install Java
 - [x] Install Jenkins
-- [x] Follow this Linkedin Learning course sponsored by the company: https://www.linkedin.com/learning/learning-jenkins-14423877
-
-
+- [ ] Following this Linkedin Learning course sponsored by the company: https://www.linkedin.com/learning/learning-jenkins-14423877
+- [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
+- [x] Installing Docker and setting up the environment
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
 
@@ -265,6 +265,89 @@ After unlinking, you can proceed with reinstalling or updating Visual Studio Cod
 
 When I followed [this](https://www.freecodecamp.org/news/how-to-open-visual-studio-code-from-your-terminal/) again.
 A prompt pop-out "Code will now prompt with 'osascript' for Administrator privileges to install the shell command.". Then I entered the password. After following all the instructions above I was able to fix the error on the terminal, and now can use `code .` command to open code/file from terminal to vscode easily.
+
+
+## Error fixing: maven and java incompatibility
+
+```
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0-M9/qdox-2.0-M9.jar (317 kB at 1.2 MB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/.jenkins/workspace/Hello-Maven/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] Source option 7 is no longer supported. Use 8 or later.
+[ERROR] Target option 7 is no longer supported. Use 8 or later.
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.313 s
+[INFO] Finished at: 2023-10-19T10:34:37+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile) on project hello: Compilation failure: Compilation failure: 
+[ERROR] Source option 7 is no longer supported. Use 8 or later.
+[ERROR] Target option 7 is no longer supported. Use 8 or later.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE
+```
+
+What the error above means? The error message you're encountering is related to the Java version compatibility settings in your Maven project. The error message is saying that "Source option 7 is no longer supported. Use 8 or later" and "Target option 7 is no longer supported. Use 8 or later."
+
+Solutions:
+
+- to match your OpenJDK 21 (Java 16) version:
+
+1. Open your project's Maven `pom.xml` file using a text editor or an Integrated Development Environment (IDE) that supports Maven.
+
+2. Locate the `<build>` section in your `pom.xml` file. If it doesn't exist, you can add it within the `<project>` section. Here's an example of where to place it:
+
+   ```xml
+   <project>
+       <!-- ... other project settings ... -->
+       <build>
+           <!-- ... plugin configuration ... -->
+       </build>
+   </project>
+   ```
+
+3. Within the `<build>` section, you need to configure the `maven-compiler-plugin`. If it's not already there, you can add it as shown below:
+
+   ```xml
+   <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>3.8.0</version>
+               <configuration>
+                   <source>16</source>
+                   <target>16</target>
+               </configuration>
+           </plugin>
+       </plugins>
+   </build>
+   ```
+
+   Make sure that you replace the `<source>` and `<target>` values with "16" to match your OpenJDK 21 version.
+
+4. Save the `pom.xml` file.
+
+5. Once you've saved the `pom.xml`, you can try building your project again using Maven. The error you encountered should be resolved.
+
+These steps update your project's Java source and target compatibility levels to match your installed Java version, OpenJDK 21 (Java 16). This should allow Maven to compile your project without issues related to outdated compatibility settings.
+
+- I was first using and running Jenkins locally. But because I don't have the right to push to the code base, I won't be able to use solution above. Now I will try to run it using a container / docker.
+
+Update: The docker environment was successfully configured. I noticed that on 03_01 "Using a global tool" module, the instructor used Maven 3.8.2 so I used that to not have any conflict anymore from the given github account.
 
 
 ## Types of jobs and roles that commonly use Jenkins:
