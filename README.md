@@ -1,39 +1,15 @@
 # learn-jenkins
 
-By learning Jenkins I'm following this Linkedin Learning course: https://www.linkedin.com/learning/learning-jenkins-14423877
+Steps taken:
 
-
-## Types of jobs and roles that commonly use Jenkins:
-
-Software Developers: to automate the building, testing, and deployment of their applications. It helps developers catch and fix issues early in the development process.
-
-DevOps Engineers: to automate the deployment of software, manage infrastructure as code, and coordinate various aspects of the software development lifecycle.
-
-System Administrators: server provisioning, backups, and monitoring.
-
-Quality Assurance (QA) Teams: to automate test suites and regression testing, ensuring that software is thoroughly tested before release.
-
-IT Operations Teams:log monitoring, security scans, and patch management.
-
-Release Managers: help manage the release and deployment of software, coordinating the process across different environments.
-
-Product Managers: to schedule and automate data backups, data exports, or other tasks related to product management.
-
-Data Engineers: used for automating data processing tasks, ETL (Extract, Transform, Load) processes, and data pipeline management.
-
-Network Administrators: configuration changes, network monitoring, and security checks.
-
-Build and Release Engineers: for creating the build pipeline, automating software releases, and ensuring the deployment process is smooth and error-free.
-
-Security Teams: for automating security scans and vulnerability assessments in software projects.
-
-Cloud Engineers: can be integrated with cloud platforms like AWS, Azure, and Google Cloud to automate cloud resource provisioning and management.
-
-Database Administrators: Automating database backups, migrations, and maintenance tasks using Jenkins.
-
-Content Management: to automate content publishing and management tasks for websites and content platforms.
-
-Education and Training: Some educators and trainers use Jenkins for teaching purposes, demonstrating how automation can improve workflow and productivity.
+- [x] Create ssh keys, add to ssh-agent and add to github (I needed to do this first because the linkedin learning uses github for its course module).
+- [x] Forking on Github and cloning that forked repo locally.
+- [x] Fork the repo with all branches. (The modules are pushed in different branches)
+- [x] Install Homebrew
+- [x] Install Git
+- [x] Install Java
+- [x] Install Jenkins
+- [x] Follow this Linkedin Learning course: https://www.linkedin.com/learning/learning-jenkins-14423877 
 
 
 ## Creating SSH key and adding to ssh-agent and add the new ssh key to gihub account
@@ -156,7 +132,7 @@ Error fixing:
 
 - First I was trying to clone the main repo and not the one I forked.
 
-## how to fork a repo with all the branches
+## How to fork a repo with all the branches
 
 When you fork a repository on GitHub, it doesn't automatically fork all of the branches. By default, a fork of a repository will only contain the default branch (usually "main" or "master"). However, you can fork individual branches from the original repository into your fork. Here's how you can do it:
 
@@ -209,6 +185,37 @@ Repeat the process for each branch you want to fork from the original repository
 
 
 
+## Types of jobs and roles that commonly use Jenkins:
+
+Software Developers: to automate the building, testing, and deployment of their applications. It helps developers catch and fix issues early in the development process.
+
+DevOps Engineers: to automate the deployment of software, manage infrastructure as code, and coordinate various aspects of the software development lifecycle.
+
+System Administrators: server provisioning, backups, and monitoring.
+
+Quality Assurance (QA) Teams: to automate test suites and regression testing, ensuring that software is thoroughly tested before release.
+
+IT Operations Teams:log monitoring, security scans, and patch management.
+
+Release Managers: help manage the release and deployment of software, coordinating the process across different environments.
+
+Product Managers: to schedule and automate data backups, data exports, or other tasks related to product management.
+
+Data Engineers: used for automating data processing tasks, ETL (Extract, Transform, Load) processes, and data pipeline management.
+
+Network Administrators: configuration changes, network monitoring, and security checks.
+
+Build and Release Engineers: for creating the build pipeline, automating software releases, and ensuring the deployment process is smooth and error-free.
+
+Security Teams: for automating security scans and vulnerability assessments in software projects.
+
+Cloud Engineers: can be integrated with cloud platforms like AWS, Azure, and Google Cloud to automate cloud resource provisioning and management.
+
+Database Administrators: Automating database backups, migrations, and maintenance tasks using Jenkins.
+
+Content Management: to automate content publishing and management tasks for websites and content platforms.
+
+Education and Training: Some educators and trainers use Jenkins for teaching purposes, demonstrating how automation can improve workflow and productivity.
 
 
 
