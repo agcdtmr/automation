@@ -9,7 +9,7 @@ Steps taken:
 - [x] Install Git
 - [x] Install Java
 - [x] Install Jenkins
-- [ ] Following Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
+- [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
 - [x] Installing Docker and setting up the environment
 
