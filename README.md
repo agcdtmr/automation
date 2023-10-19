@@ -389,7 +389,6 @@ Education and Training: Some educators and trainers use Jenkins for teaching pur
 Jenkins
 - [ ] https://www.jenkins.io/doc/
 - [ ] https://www.cloudbees.com/jenkins/what-is-jenkins
-- [ ] https://www.linkedin.com/learning/learning-jenkins-14423877/exercise-files?autoSkip=true&resume=false&u=2080948
 - [ ] https://www.jenkins.io/doc/book/installing/docker/
 - [ ] https://www.macminivault.com/installing-jenkins-on-macos/
 - [ ] https://medium.com/javarevisited/7-best-courses-to-learn-jenkins-and-ci-cd-for-devops-engineers-and-software-developers-df2de8fe38f3
