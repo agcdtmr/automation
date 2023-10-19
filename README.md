@@ -355,7 +355,7 @@ These steps update your project's Java source and target compatibility levels to
 
 - I was first using and running Jenkins locally. But because I don't have the right to push to the code base, I won't be able to use solution above. Now I will try to run it using a container / docker.
 
-Update: The docker environment was successfully configured. I noticed that on 03_01 "Using a global tool" module, the instructor used Maven 3.8.2 so I used that to not have any conflict anymore from the given github account.
+**Update: The docker environment was successfully configured. I noticed that on 03_01 "Using a global tool" module, the instructor used Maven 3.8.2 so I used that to not have any conflict anymore from the given github account.**
 
 
 ## Types of jobs and roles that commonly use Jenkins:
