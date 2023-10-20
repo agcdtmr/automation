@@ -1,6 +1,6 @@
 # automation
 
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/learn-jenkins/blob/main/jenkins-fundamentals.md)
-- [ ] [Gitlab]()
+- [x] [Basics of Gitlab](https://github.com/agcdtmr/automation/blob/main/CertificateOfCompletion_Learning%20GitLab.pdf)
 - [ ] [Jenkins + Gitlab]()
 - [ ] [Advanced Jenkins]()
