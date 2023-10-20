@@ -14,7 +14,7 @@ Steps taken:
 - [x] Successfully finished the course quizzes, [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221) and mini projects. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
 - [x] Create .gitignore file
-- [x] Pause jenkins container on Docker and Stop jenkins service locally
+- [x] Pause jenkins container on Docker and stop jenkins service locally using homebrew
 
 ## Terminology
 
