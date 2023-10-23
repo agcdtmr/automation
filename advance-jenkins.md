@@ -12,16 +12,16 @@ Requirements for this challenge:
 - Use the latest version of Ubuntu Server. 
 - Install NGINX as a proxy to Jenkins. 
 - Install and configure Jenkins. 
-- use a public cloud service for this challenge. For this I used Microsoft Azure:
--- Linux (ubuntu 20.04)
---------- Standard B1s (1 vcpu, 1 GiB memory)
---------- 20.4.1.111
---------- jenk.westeurope.cloudapp.azure.com
---------- creates ssh key as .pem file
---------- location: West Europe
---------- nginx version: nginx/1.18.0 (Ubuntu)
---------- jenkins -version 2.428
---------- security rules for: ssh 22, http 80, https 443
+- use a public cloud service for this challenge.
+
+For this I used Microsoft Azure:
+- [x] Linux (ubuntu 20.04), Standard B1s (1 vcpu, 1 GiB memory), 20.4.1.111
+- [x] DNS: jenk.westeurope.cloudapp.azure.com
+- [x] creates ssh key as .pem file
+- [x] location: West Europe
+- [x] nginx version: nginx/1.18.0 (Ubuntu)
+- [x] jenkins -version 2.428
+- [x] security rules for: ssh 22, http 80, https 443
 
 
 The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
