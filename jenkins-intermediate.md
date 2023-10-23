@@ -44,7 +44,7 @@ For my solution:
 - [x] location: West Europe
 - [x] nginx version: nginx/1.18.0 (Ubuntu)
 - [x] jenkins -version 2.428
-- [x] security rules for: ssh 22, http 80, https 443
+- [x] security rules for: ssh 22 (to connect to the server), http 80 (to connect github and jenkins via a web interface)
 - [x] uses user data script to install nginx & jenkins
 
 
@@ -123,4 +123,74 @@ Here are some common troubleshooting steps to help you identify and resolve the 
 11. **Logs and Error Messages:** Examine the logs and error messages on your VM, Jenkins, and Nginx for any clues as to what might be causing the issue. These logs can provide valuable information for troubleshooting.
 
 
+## Bash script for automating the installation and configuration of various software components and services. Here's a short explanation of what's happening in the script:
 
+1. The script begins with a comment and an echo statement to indicate that the installation is starting.
+
+2. It adds the Jenkins package repository key to the system's keyring and sets up the Jenkins repository in the APT sources list.
+
+3. Then, it updates the APT package list and upgrades installed packages.
+
+4. It installs several packages, including Java 11, NGINX, and Jenkins, which are common components for setting up a Jenkins server.
+
+5. The script configures Jenkins by setting options to skip the installation wizard and downloading a list of suggested plugins.
+
+6. It downloads a plugin installation tool, runs it to install the suggested plugins, and changes the ownership of the plugin directory to the Jenkins user.
+
+7. NGINX is configured to act as a reverse proxy for Jenkins, with a new server block defined to pass requests to the Jenkins server.
+
+8. The script reloads NGINX to apply the new configuration.
+
+9. Docker is installed, with the script adding the Docker repository key and setting up the Docker repository in the APT sources list. Docker and related packages are then installed.
+
+10. The Docker and Containerd services are enabled, and the script adds the "ubuntu" and "jenkins" users to the "docker" group.
+
+11. Jenkins is restarted to apply any changes, and the script copies the initial admin password for Jenkins.
+
+12. The script clears the terminal, displays a message that the installation is complete, and provides the initial credentials (username: admin, password: generated during Jenkins setup).
+
+In summary, the script automates the installation and configuration of Jenkins, NGINX, Java, and Docker on a server, making it easier to set up a Jenkins server for continuous integration and continuous deployment (CI/CD) purposes.
+
+
+## What is apt and apt package list?
+
+`apt` stands for "Advanced Package Tool," and it is a package management system used in various Linux distributions, including Debian, Ubuntu, and their derivatives. `apt` is a command-line tool that allows users to interact with the system's package repositories to install, update, upgrade, and manage software packages.
+
+Here are some common `apt` commands:
+
+1. `apt update`: This command refreshes the local package database by downloading the latest package information from the configured software repositories. It ensures that your system is aware of the most up-to-date package versions available.
+
+2. `apt upgrade`: This command installs the latest versions of all installed packages on your system. It doesn't install new packages or remove any existing ones.
+
+3. `apt-get install <package-name>`: This command is used to install a specific package or packages on your system.
+
+4. `apt-get remove <package-name>`: This command is used to remove a specific package from your system.
+
+5. `apt-get purge <package-name>`: This command is used to remove a package along with its configuration files.
+
+6. `apt list`: This command lists all available packages in the repositories.
+
+7. `apt search <search-term>`: This command allows you to search for packages based on a keyword or search term.
+
+The "APT package list" typically refers to the list of available software packages in the repositories that `apt` uses to manage packages on your system. When you run `apt update`, it downloads and updates this package list to ensure that your system has the latest information about available software packages. This list includes package names, versions, dependencies, and other metadata necessary for package management.
+
+By keeping the APT package list up to date, you can ensure that you are installing and updating software with the most current versions and that you have access to the latest security updates and bug fixes.
+
+
+## Docker is included in the script provided for several reasons:
+
+Docker is included in the script for several reasons:
+
+1. **Isolation of Jenkins and its Dependencies:** Docker provides a way to isolate Jenkins and its dependencies in a container. This isolation ensures that Jenkins runs consistently, regardless of the underlying system's configuration. It helps prevent conflicts between Jenkins and other software installed on the server.
+
+2. **Ease of Deployment:** Using Docker makes it easy to deploy Jenkins as a containerized application. You can package Jenkins and its required components in a Docker image, making it simple to replicate the same environment on different servers or in different environments (e.g., development, testing, production).
+
+3. **Portability:** Docker containers are highly portable. You can move a Jenkins Docker container between different hosts or cloud platforms without worrying about compatibility issues. This portability is especially valuable in cloud and DevOps environments.
+
+4. **Version Control and Rollbacks:** Docker images can be version-controlled, allowing you to track changes to your Jenkins environment over time. If an update or configuration change causes issues, you can roll back to a previous image.
+
+5. **Consistency:** Docker containers ensure that Jenkins runs consistently across different stages of the software development and deployment lifecycle, which is crucial for maintaining a reliable CI/CD pipeline.
+
+6. **Resource Management:** Docker provides resource management and scaling capabilities, allowing you to allocate specific resources to Jenkins containers, which can help optimize the performance of your Jenkins server.
+
+In summary, Docker is used in the script to containerize Jenkins, making it easier to manage, deploy, and ensure consistent performance of Jenkins within the context of continuous integration and continuous deployment (CI/CD) pipelines. It's a common practice to use Docker for CI/CD environments to maintain a high degree of flexibility, portability, and ease of management.
