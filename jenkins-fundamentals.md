@@ -1,4 +1,4 @@
-# jenkins-fundamentals
+# Jenkins Fundamentals
 
 Steps taken:
 - [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. 
