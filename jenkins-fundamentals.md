@@ -3,7 +3,7 @@
 Steps taken:
 - [x] Follow Linkedin Learning course about [Jenkins Fundamentals](https://www.linkedin.com/learning/learning-jenkins-14423877) sponsored by the company. 
 - [x] Create ssh keys, add to ssh-agent and add to github (I needed to do this first because the linkedin learning uses github for its course module).
-- [x] Forking on Github and cloning that forked repo locally.
+- [x] Forking the [module](https://github.com/LinkedInLearning/learning-jenkins-3003221) and cloning that forked repo locally.
 - [x] Fork the repo with all branches. (The modules are pushed in different branches)
 - [x] Install Homebrew
 - [x] Install Git
@@ -14,7 +14,7 @@ Steps taken:
 - [x] Successfully finished the course quizzes, [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221) and mini projects. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
 - [x] Create .gitignore file
-- [x] Pause jenkins container on Docker and because I first used jenkins locally I needed to stop jenkins service locally using homebrew.
+- [x] Pause jenkins container on Docker and because I first used jenkins locally I also needed to stop that jenkins service using homebrew.
 
 ## Terminology
 
