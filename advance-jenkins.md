@@ -1,7 +1,7 @@
 # Advanced Jenkins
 
 
-## Challenge: deploying a Jenkins server to use for this course. 
+## Challenge #1: deploying a Jenkins server to use for this course. 
 
 Check [here](https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01) my Challenge #1 solution.
 
