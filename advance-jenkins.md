@@ -1,22 +1,31 @@
-# Advanced Jenkins
+# Intermediate Jenkins
 
+For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential Training](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
 
-Check [here](https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01) my Challenge #1 solution.
+Challenge: 
+Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
 
-There are three basic requirements for this challenge:
+Requirements for this challenge:
 
-Use the latest version of Ubuntu Server. 
-Install NGINX as a proxy to Jenkins. 
-And finally, install and configure Jenkins. 
+- Use the latest version of Ubuntu Server. 
+- Install NGINX as a proxy to Jenkins. 
+- Install and configure Jenkins. 
+- use a public cloud service for this challenge 
+------ for this I used Microsoft Azure:
+--------- Linux (ubuntu 20.04)
+--------- Standard B1s (1 vcpu, 1 GiB memory)
+--------- 20.4.1.111
+--------- jenk.westeurope.cloudapp.azure.com
+--------- creates ssh key as .pem file
+--------- location: West Europe
+--------- nginx version: nginx/1.18.0 (Ubuntu)
+--------- jenkins -version 2.428
+--------- security rules for: ssh 22, http 80, https 443
 
-use a public cloud service for this challenge --- Microsoft Azure
 
-The main reason I am suggesting you use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
-
-
-If you aren't able to deploy Jenkins on a public cloud platform, please use the local system that you have available to you. Jenkins runs on Windows macOS and Linux. So you can install Jenkins just about anywhere. As I mentioned, we'll be using Jenkins for continuous integration with a code repo, namely GitHub. And local installations will not be able to receive web hooks to trigger jobs. However, you can still follow along with Jenkins installed on your local system. I'll be using Amazon Web Services. So in my solution to this challenge, I'll also be creating a key pair for SSH connections, creating an EC2 instance using a Ubuntu AMI, and creating an elastic IP for persistent DNS assignment. I'll also be using a user data script to install NGINX and Jenkins. Exercise files are available for this challenge. As I mentioned, there's a script that will update the Ubuntu OS. Install NGINX and install Jenkins. So you won't have to do an installation from scratch. The script also installs the suggested plugins, and skips the installation wizard. So even if you're following along, and you're using a different cloud platform please use Ubuntu for your operating system so you can use the script and the exercise files. If you're following along and installing on a different operating system, particularly windows or macOS, review the course Learning Jenkins for detailed instructions on installing Jenkins on those platforms. This challenge should take about 15 minutes to complete. After you've completed the challenge, join me in the next video to discuss the solution.
+The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
 
 
 ## To connect to an Ubuntu virtual machine (VM) in Azure using SSH and a `.pem` file, you can follow these steps:
