@@ -3,6 +3,8 @@
 
 ## Challenge: deploying a Jenkins server to use for this course. 
 
+Check [here](https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01) my Challenge #1 Solution
+
 There are three basic requirements for this challenge:
 
 Use the latest version of Ubuntu Server. 
