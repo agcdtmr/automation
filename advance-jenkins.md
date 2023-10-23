@@ -12,9 +12,8 @@ Requirements for this challenge:
 - Use the latest version of Ubuntu Server. 
 - Install NGINX as a proxy to Jenkins. 
 - Install and configure Jenkins. 
-- use a public cloud service for this challenge 
------- for this I used Microsoft Azure:
---------- Linux (ubuntu 20.04)
+- use a public cloud service for this challenge. For this I used Microsoft Azure:
+-- Linux (ubuntu 20.04)
 --------- Standard B1s (1 vcpu, 1 GiB memory)
 --------- 20.4.1.111
 --------- jenk.westeurope.cloudapp.azure.com
