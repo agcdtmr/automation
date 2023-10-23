@@ -27,7 +27,7 @@ For this I used Microsoft Azure:
 The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
 
 
-## To connect to an Ubuntu virtual machine (VM) in Azure using SSH and a `.pem` file, you can follow these steps:
+## Error fixing: To connect to an Ubuntu virtual machine (VM) in Azure using SSH and a `.pem` file, you can follow these steps:
 
 1. **Prepare Your Azure VM**:
    Ensure you have created an Ubuntu VM in Azure and have downloaded the `.pem` private key file during the VM creation process.
