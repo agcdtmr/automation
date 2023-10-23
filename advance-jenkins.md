@@ -4,8 +4,8 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential T
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
 
-Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_02-challenge-deploy-a-jenkins-server
-Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_02-challenge-deploy-a-jenkins-server
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
 
 Requirements for this challenge:
 
