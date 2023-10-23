@@ -2,17 +2,39 @@
 
 For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential Training](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
+## Notes
+
+- [ ] DevOps
+- [ ] Planning, Development and Operation
+- [ ] DevOps Life Cycle: Plan, Code, Build, Test, Release, Deploy, Operate, Monitor
+- [ ] Development Group: Plan, Code, Build, Test
+- [ ] Operations Group: Release, Deploy, Operate, Monitor
+- [ ] Jenkins is the perfect tool for automating processes, tied to the build, test, release and deploy stages.
+- [ ] Continuous integration or CI = build and test phases of the DevOps Life Cycle = produce an artifact that can be deployed.
+- [ ] Tools like Jenkins are used to automate the build and test stages, the process is known as continuous integration. Using automation in the release and deploy stages is called continuous delivery. And if the process is completely automated, it can be referred to as continuous deployment.
+- [ ] Continuous delivery and deployment or CD = release and deploy stages of the DevOps Life Cycle = take an artifact and make it available for use, or actually put it to work. 
+- [ ] The release stage is where the delivery happens. Jenkins may upload a container image to a repository, or make a jar file available for downloading. Ultimately, delivering the artifact means that a version of the application is available and ready to be used. 
+- [ ] The next step is to deploy. In some cases the deployment is manual. For a continuous deployment, all steps are automated and completed with no, or very little human interaction.
+- [ ] Ubuntu server
+- [ ] NGINX
+- [ ] proxy
+- [ ] web hooks
+- [ ] trigger jobs
+- [ ] elastic IP
+- [ ] DNS
+- [ ] EC2 Instance
+- [ ] user data script
+
 ## Challenge #1: deploying a Jenkins server to use for this course. 
 
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_02-challenge-deploy-a-jenkins-server
 - Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
 
 Requirements for this challenge:
-
-- Use the latest version of Ubuntu Server. 
-- Install NGINX as a proxy to Jenkins. 
-- Install and configure Jenkins. 
-- use a public cloud service for this challenge.
+- [x] Use the latest version of Ubuntu Server. 
+- [x] Install NGINX as a proxy to Jenkins. 
+- [x] Install and configure Jenkins. 
+- [x] use a public cloud service for this challenge.
 
 For this I used Microsoft Azure:
 - [x] Linux (ubuntu 20.04), Standard B1s (1 vcpu, 1 GiB memory), 20.4.1.111
@@ -72,6 +94,8 @@ Additionally, ensure that your Azure VM's network security group allows incoming
 
 ## Error fixing: a virtual machine (VM) running Jenkins and Nginx on Azure, and experiencing issues with DNS or the public IP not working in a browser.s 
 
+**Solution: Adjust NSG or firewall inbound rules for http & https**
+
 Here are some common troubleshooting steps to help you identify and resolve the issue:
 
 1. **Check VM Status:** Ensure that your Azure VM is running and in a healthy state. If it's not running, start the VM from the Azure Portal.
@@ -96,6 +120,5 @@ Here are some common troubleshooting steps to help you identify and resolve the 
 
 11. **Logs and Error Messages:** Examine the logs and error messages on your VM, Jenkins, and Nginx for any clues as to what might be causing the issue. These logs can provide valuable information for troubleshooting.
 
-If you continue to experience issues, consider providing more specific details about the problem or any error messages you encounter, which would help in providing a more targeted solution.
 
-**Solution: Adjust NSG or firewall inbound rules for http & https**
+
