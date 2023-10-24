@@ -2,7 +2,7 @@
 
 For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential Training](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
-- [Challenge #1](#Challenge-#1-:-deploying-a-Jenkins-server-to-use-for-this-course.)
+- [Challenge #1](#Challenge-#1:-deploying-a-Jenkins-server-to-use-for-this-course.)
 
 ## Notes
 
