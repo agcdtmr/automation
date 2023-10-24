@@ -2,6 +2,8 @@
 
 For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential Training](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
+[- Challenge #1](#Challenge-#1-:-deploying-a-Jenkins-server-to-use-for-this-course.)
+
 ## Notes
 
 - [ ] DevOps
@@ -23,7 +25,15 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential T
 - [ ] elastic IP
 - [ ] DNS
 - [ ] EC2 Instance
+- [ ] Instance
 - [ ] user data script
+- [ ] HTTP
+- [ ] SSH
+- [ ] Scripted pipeline starts with the word 'node' (Groovy-based DSL)
+- [ ] Declarative pipeline starts with the word 'pipeline' (Project as code)
+- [ ] A declarative pipeline configuration has three required sections, an agent section, a stages section. And inside the stages section, we're required to have at least one stage with at least one step.
+- [ ] Pipeline's "agent"
+
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
 
@@ -194,3 +204,94 @@ Docker is included in the script for several reasons:
 6. **Resource Management:** Docker provides resource management and scaling capabilities, allowing you to allocate specific resources to Jenkins containers, which can help optimize the performance of your Jenkins server.
 
 In summary, Docker is used in the script to containerize Jenkins, making it easier to manage, deploy, and ensure consistent performance of Jenkins within the context of continuous integration and continuous deployment (CI/CD) pipelines. It's a common practice to use Docker for CI/CD environments to maintain a high degree of flexibility, portability, and ease of management.
+
+## What is `source install.sh`?
+
+The command `source install.sh` is used to execute a shell script in the current shell environment. When you use the `source` command or its shorthand `.` (dot), it reads and executes the commands from the specified script (in this case, `install.sh`) in the context of the current shell session. This means that any environment variables, functions, or changes made by the script will affect the current shell session.
+
+Here's how it works:
+
+1. You run the command `source install.sh` or `. install.sh` in your terminal.
+
+2. The contents of the `install.sh` script are executed as if you had typed them directly into your terminal.
+
+3. Any environment variables, functions, or other changes made by the script are applied to your current shell session.
+
+This is commonly used when you want to set environment variables, modify the shell's behavior, or perform other tasks that need to persist in your current shell session. For example, if `install.sh` contains environment variable assignments, they will be available in your current shell after running the command.
+
+Keep in mind that the script `install.sh` should be in your current working directory or specified with its full path if it's located elsewhere. Additionally, ensure that the script is executable (use `chmod +x install.sh` to make it executable if needed).
+
+## What is http?
+
+HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol used for transmitting and receiving data on the World Wide Web. HTTP is the foundation of data communication on the internet, allowing web browsers and web servers to communicate with each other. Here are some key points about HTTP:
+
+1. **Client-Server Communication:** HTTP is a request-response protocol. A client (typically a web browser) sends a request to a web server, and the server responds with the requested data (usually a web page or a resource like an image).
+
+2. **Stateless:** HTTP is a stateless protocol, which means that each request from a client to a server is treated independently, and the server does not maintain any information about previous requests. To implement sessions and maintain state, web applications often use cookies or other mechanisms.
+
+3. **Text-Based:** HTTP messages are primarily text-based, making them human-readable. These messages include headers and, optionally, a message body. The headers contain metadata about the request or response, while the message body may contain the actual data being transferred.
+
+4. **Standard Methods:** HTTP defines a set of methods, also known as verbs, for indicating the desired action to be performed on the resource identified in the request. Common HTTP methods include GET (retrieve data), POST (send data to be processed), PUT (update data), DELETE (remove data), and others.
+
+5. **Status Codes:** HTTP responses include status codes that provide information about the outcome of the request. For example, a "200 OK" status code indicates a successful request, while a "404 Not Found" status code indicates that the requested resource was not found.
+
+6. **URLs:** HTTP uses Uniform Resource Locators (URLs) to identify resources on the web. A URL typically consists of a protocol (e.g., "http" or "https"), a domain name (e.g., www.example.com), and a path to the specific resource (e.g., /index.html).
+
+7. **HTTP/1.1 and HTTP/2:** There have been several versions of the HTTP protocol. HTTP/1.1 was widely used for many years, but HTTP/2 and later versions were developed to improve performance and security, enabling features like multiplexing and reduced latency.
+
+8. **Security:** HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that encrypts data transferred between the client and server using protocols like SSL/TLS. It ensures the confidentiality and integrity of data and is commonly used for sensitive transactions like online shopping and banking.
+
+HTTP is the backbone of the World Wide Web, allowing users to access and interact with web content. It is a fundamental technology that enables the retrieval and display of web pages and the exchange of data between clients and servers on the internet.
+
+## Why http is port 80?
+
+HTTP uses port 80 as its default port for communication, while HTTPS (HTTP Secure) typically uses port 443. The assignment of port numbers for various protocols is defined by the Internet Assigned Numbers Authority (IANA) to ensure consistency and compatibility in network communication. Port numbers are used to specify which protocol should handle incoming network data.
+
+The choice of port 80 for HTTP and port 443 for HTTPS is a convention and simplifies the process of routing web traffic on the internet. When a client (e.g., a web browser) makes an HTTP request, it typically assumes that the server it's communicating with is listening on port 80, and when it makes an HTTPS request, it assumes port 443.
+
+These conventions make it easier for routers, firewalls, and other network devices to direct traffic to the appropriate destination. When you enter a URL in your web browser, it typically doesn't include a port number. If the URL is "http://example.com," the browser assumes port 80, and if it's "https://example.com," it assumes port 443.
+
+It's important to note that while port 80 and port 443 are the default ports for HTTP and HTTPS, respectively, web servers can be configured to use other ports if necessary. However, for standard web traffic, these default port numbers simplify the process of establishing connections between clients and servers.
+
+## what is ssh and rsa and ed25591?
+
+SSH (Secure Shell) and RSA (Rivest-Shamir-Adleman) are both related to secure communication and authentication in the context of remote access and data transfer over a network. ED25519 is a specific digital signature algorithm used in SSH for authentication.
+
+1. **SSH (Secure Shell)**:
+   - SSH is a network protocol used to secure and encrypt data communication between two devices. It is commonly used for remote login and secure file transfer, among other purposes.
+   - SSH provides a secure and encrypted way to access and manage remote systems over an unsecured network, such as the internet.
+
+2. **RSA (Rivest-Shamir-Adleman)**:
+   - RSA is a widely-used cryptographic algorithm that is used for secure data transmission and authentication. It was invented by Ron Rivest, Adi Shamir, and Leonard Adleman in the 1970s.
+   - In the context of SSH, RSA is used for authentication. RSA key pairs consist of a public key and a private key. The public key is used to encrypt data, and the private key is used to decrypt it. It is often used in SSH for secure passwordless logins.
+
+3. **ED25519**:
+   - ED25519 is a specific elliptic curve digital signature algorithm (EdDSA) that is used in SSH for authentication purposes.
+   - It is considered more secure and efficient than some older algorithms like DSA or ECDSA. ED25519 keys are shorter and faster to generate than RSA keys while providing a high level of security.
+   - Many modern SSH implementations encourage the use of ED25519 for key pairs to enhance security.
+
+In the context of SSH, RSA and ED25519 are key types that can be used for authentication. When you connect to a remote server using SSH, you can choose to use an RSA key or an ED25519 key for authentication. These keys are more secure than traditional password-based authentication, as they provide a strong cryptographic layer for securing the communication between your local and remote systems.
+
+## What is `ssh -i`?
+
+The `ssh -i` command is used to specify an identity file (private key) when connecting to a remote server using SSH. The private key is used for authentication, allowing you to establish a secure connection without entering a password. Here's how you typically use the `ssh -i` command:
+
+```bash
+ssh -i /path/to/private-key-file username@hostname
+```
+
+- `-i`: This option specifies the path to the private key file. The private key file should be in the OpenSSH format, usually ending with `.pem` or no file extension.
+
+- `/path/to/private-key-file`: Replace this with the actual file path to your private key.
+
+- `username`: The username you use to log in to the remote server.
+
+- `hostname`: The hostname or IP address of the remote server you want to connect to.
+
+Here's an example of how you might use it:
+
+```bash
+ssh -i ~/.ssh/my_private_key.pem user@example.com
+```
+
+This command will initiate an SSH connection to the remote server with the specified private key for authentication. It's a more secure and convenient way to log in compared to using a password, especially in automated or script-driven tasks.
