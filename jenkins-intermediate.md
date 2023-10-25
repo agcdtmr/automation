@@ -4,6 +4,33 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential T
 
 - [Challenge #1](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 
+
+### Challenge #1: deploying a Jenkins server to use for this course. 
+
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_02-challenge-deploy-a-jenkins-server
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
+
+Requirements for this challenge:
+- [x] Use the latest version of Ubuntu Server. 
+- [x] Install NGINX as a proxy to Jenkins. 
+- [x] Install and configure Jenkins. 
+- [x] use a public cloud service for this challenge.
+
+For my solution:
+- [x] I used Microsoft Azure
+- [x] Linux (ubuntu 20.04), Standard B1s (1 vcpu, 1 GiB memory), 20.4.1.111
+- [x] DNS: jenk.westeurope.cloudapp.azure.com
+- [x] creates ssh key pair and public as .pem file
+- [x] location: West Europe
+- [x] nginx version: nginx/1.18.0 (Ubuntu)
+- [x] jenkins -version 2.428
+- [x] security rules for: ssh 22 (to connect to the server), http 80 (to connect github and jenkins via a web interface)
+- [x] uses user data script to install nginx & jenkins
+
+
+The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
+
+
 ## Notes
 
 - [ ] DevOps
@@ -38,33 +65,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential T
 - [ ] Environment variables
 
 
-## Challenge #1: deploying a Jenkins server to use for this course. 
-
-- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_02-challenge-deploy-a-jenkins-server
-- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge01
-
-Requirements for this challenge:
-- [x] Use the latest version of Ubuntu Server. 
-- [x] Install NGINX as a proxy to Jenkins. 
-- [x] Install and configure Jenkins. 
-- [x] use a public cloud service for this challenge.
-
-For my solution:
-- [x] I used Microsoft Azure
-- [x] Linux (ubuntu 20.04), Standard B1s (1 vcpu, 1 GiB memory), 20.4.1.111
-- [x] DNS: jenk.westeurope.cloudapp.azure.com
-- [x] creates ssh key pair and public as .pem file
-- [x] location: West Europe
-- [x] nginx version: nginx/1.18.0 (Ubuntu)
-- [x] jenkins -version 2.428
-- [x] security rules for: ssh 22 (to connect to the server), http 80 (to connect github and jenkins via a web interface)
-- [x] uses user data script to install nginx & jenkins
-
-
-The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
-
-
-## Error fixing: To connect to an Ubuntu virtual machine (VM) in Azure using SSH and a `.pem` file, you can follow these steps:
+### Error fixing: To connect to an Ubuntu virtual machine (VM) in Azure using SSH and a `.pem` file, you can follow these steps:
 
 1. **Prepare Your Azure VM**:
    Ensure you have created an Ubuntu VM in Azure and have downloaded the `.pem` private key file during the VM creation process.
@@ -107,7 +108,7 @@ Please note that the exact commands and filenames may vary depending on your spe
 Additionally, ensure that your Azure VM's network security group allows incoming SSH traffic on port 22, and that the VM is running and reachable with the provided public IP address or DNS hostname.
 
 
-## Error fixing: a virtual machine (VM) running Jenkins and Nginx on Azure, and experiencing issues with DNS or the public IP not working in a browser.s 
+### Error fixing: a virtual machine (VM) running Jenkins and Nginx on Azure, and experiencing issues with DNS or the public IP not working in a browser.s 
 
 **Solution: Adjust NSG or firewall inbound rules for http & https**
 
@@ -136,7 +137,7 @@ Here are some common troubleshooting steps to help you identify and resolve the 
 11. **Logs and Error Messages:** Examine the logs and error messages on your VM, Jenkins, and Nginx for any clues as to what might be causing the issue. These logs can provide valuable information for troubleshooting.
 
 
-## Bash script for automating the installation and configuration of various software components and services. Here's a short explanation of what's happening in the script:
+### Bash script for automating the installation and configuration of various software components and services. Here's a short explanation of what's happening in the script:
 
 1. The script begins with a comment and an echo statement to indicate that the installation is starting.
 
@@ -165,7 +166,7 @@ Here are some common troubleshooting steps to help you identify and resolve the 
 In summary, the script automates the installation and configuration of Jenkins, NGINX, Java, and Docker on a server, making it easier to set up a Jenkins server for continuous integration and continuous deployment (CI/CD) purposes.
 
 
-## What is apt and apt package list?
+### What is apt and apt package list?
 
 `apt` stands for "Advanced Package Tool," and it is a package management system used in various Linux distributions, including Debian, Ubuntu, and their derivatives. `apt` is a command-line tool that allows users to interact with the system's package repositories to install, update, upgrade, and manage software packages.
 
@@ -190,9 +191,7 @@ The "APT package list" typically refers to the list of available software packag
 By keeping the APT package list up to date, you can ensure that you are installing and updating software with the most current versions and that you have access to the latest security updates and bug fixes.
 
 
-## Docker is included in the script provided for several reasons:
-
-Docker is included in the script for several reasons:
+### Docker is included in the script provided for several reasons:
 
 1. **Isolation of Jenkins and its Dependencies:** Docker provides a way to isolate Jenkins and its dependencies in a container. This isolation ensures that Jenkins runs consistently, regardless of the underlying system's configuration. It helps prevent conflicts between Jenkins and other software installed on the server.
 
@@ -208,7 +207,7 @@ Docker is included in the script for several reasons:
 
 In summary, Docker is used in the script to containerize Jenkins, making it easier to manage, deploy, and ensure consistent performance of Jenkins within the context of continuous integration and continuous deployment (CI/CD) pipelines. It's a common practice to use Docker for CI/CD environments to maintain a high degree of flexibility, portability, and ease of management.
 
-## What is `source install.sh`?
+### What is `source install.sh`?
 
 The command `source install.sh` is used to execute a shell script in the current shell environment. When you use the `source` command or its shorthand `.` (dot), it reads and executes the commands from the specified script (in this case, `install.sh`) in the context of the current shell session. This means that any environment variables, functions, or changes made by the script will affect the current shell session.
 
@@ -224,7 +223,7 @@ This is commonly used when you want to set environment variables, modify the she
 
 Keep in mind that the script `install.sh` should be in your current working directory or specified with its full path if it's located elsewhere. Additionally, ensure that the script is executable (use `chmod +x install.sh` to make it executable if needed).
 
-## What is http?
+### What is http?
 
 HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol used for transmitting and receiving data on the World Wide Web. HTTP is the foundation of data communication on the internet, allowing web browsers and web servers to communicate with each other. Here are some key points about HTTP:
 
@@ -246,7 +245,7 @@ HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol
 
 HTTP is the backbone of the World Wide Web, allowing users to access and interact with web content. It is a fundamental technology that enables the retrieval and display of web pages and the exchange of data between clients and servers on the internet.
 
-## Why http is port 80?
+### Why http is port 80?
 
 HTTP uses port 80 as its default port for communication, while HTTPS (HTTP Secure) typically uses port 443. The assignment of port numbers for various protocols is defined by the Internet Assigned Numbers Authority (IANA) to ensure consistency and compatibility in network communication. Port numbers are used to specify which protocol should handle incoming network data.
 
@@ -256,7 +255,7 @@ These conventions make it easier for routers, firewalls, and other network devic
 
 It's important to note that while port 80 and port 443 are the default ports for HTTP and HTTPS, respectively, web servers can be configured to use other ports if necessary. However, for standard web traffic, these default port numbers simplify the process of establishing connections between clients and servers.
 
-## what is ssh and rsa and ed25591?
+### what is ssh and rsa and ed25591?
 
 SSH (Secure Shell) and RSA (Rivest-Shamir-Adleman) are both related to secure communication and authentication in the context of remote access and data transfer over a network. ED25519 is a specific digital signature algorithm used in SSH for authentication.
 
@@ -275,7 +274,7 @@ SSH (Secure Shell) and RSA (Rivest-Shamir-Adleman) are both related to secure co
 
 In the context of SSH, RSA and ED25519 are key types that can be used for authentication. When you connect to a remote server using SSH, you can choose to use an RSA key or an ED25519 key for authentication. These keys are more secure than traditional password-based authentication, as they provide a strong cryptographic layer for securing the communication between your local and remote systems.
 
-## What is `ssh -i`?
+### What is `ssh -i`?
 
 The `ssh -i` command is used to specify an identity file (private key) when connecting to a remote server using SSH. The private key is used for authentication, allowing you to establish a secure connection without entering a password. Here's how you typically use the `ssh -i` command:
 
@@ -300,7 +299,7 @@ ssh -i ~/.ssh/my_private_key.pem user@example.com
 This command will initiate an SSH connection to the remote server with the specified private key for authentication. It's a more secure and convenient way to log in compared to using a password, especially in automated or script-driven tasks.
 
 
-## What is a pipeline syntax generator?
+### What is a pipeline syntax generator?
 
 A pipeline syntax generator is a tool or software component designed to assist in the creation and configuration of pipeline scripts, particularly in the context of continuous integration/continuous deployment (CI/CD) pipelines. These tools are often used in conjunction with pipeline orchestration and automation systems like Jenkins, Travis CI, CircleCI, and others. **The primary purpose of a pipeline syntax generator is to simplify the process of writing pipeline configuration files by providing a user-friendly interface and generating the necessary script or code.**
 
@@ -323,7 +322,7 @@ By using a pipeline syntax generator, development and operations teams can strea
 While specific pipeline syntax generators vary in terms of features and capabilities, they are generally designed to simplify the creation and management of CI/CD pipelines, making the adoption of CI/CD practices more accessible to a broader range of teams and individuals.
 
 
-## Required sections in the pipeline configuration. A pipeline configuration has three required sections. Agent, stages, at least one stage and at least one step. why required? what does each section do?
+### Required sections in the pipeline configuration. A pipeline configuration has three required sections. Agent, stages, at least one stage and at least one step. why required? what does each section do?
 
 In the context of a software development or automation pipeline, a pipeline configuration typically consists of several sections to define how the pipeline operates. The three required sections you mentioned, "agent," "stages," and at least one "stage" with at least one "step," are essential for defining the structure and behavior of the pipeline. Let's break down each of these sections:
 
