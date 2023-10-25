@@ -376,3 +376,8 @@ In the context of a software development or automation pipeline, a pipeline conf
 The purpose of these required sections is to provide a clear and structured way to define how the pipeline should run, where it should run, and what tasks it should perform. Having these sections ensures that the pipeline is well-organized and can be easily understood, maintained, and scaled as needed.
 
 The actual syntax and structure may vary depending on the pipeline configuration language or tool you're using (e.g., YAML for configuration files in tools like Jenkins, CircleCI, or GitHub Actions), but the fundamental concepts of an "agent," "stages," and "steps" are generally consistent across most pipeline systems.
+
+
+## Error fixing: 502 Bad Gateway nginx/1.18.0 (Ubuntu)
+
+Solution: I need to access my Microsoft Azure portal again, and restart the vm where I am running the jenkins server
