@@ -32,6 +32,12 @@ For my solution:
 The main reason to use a cloud service is so your Jenkins is accessible from a public URL. In later lessons, we'll be implementing continuous integration from a code repo, and your Jenkins server needs to be publicly accessible to allow a web hook to trigger jobs. 
 
 
+## Challenge #2: Develop a parameterized pipeline.
+
+- Challenge: https://github.com/LinkedInLearning/essential-jenkins-2468076/tree/main/Ch02/02_07-challenge-develop-a-parameterized-pipeline
+- Solution:
+
+
 ## Notes
 
 - [ ] DevOps
