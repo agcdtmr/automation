@@ -38,6 +38,53 @@ The main reason to use a cloud service is so your Jenkins is accessible from a p
 - Solution:
 
 
+```
+pipeline {
+    agent any
+    parameters {
+        choice(name: 'ENVIRONMENT',
+        choices: ['DEVELOPMENT', 'STAGING', 'PRODUCTION'],
+        description: 'Choose the environment for this deployment')
+        
+        password(name: 'APIKEY',
+        description: 'Passes a secret value into the pipeline',
+        defaultValue: '123ABC')
+        
+        text(name: 'CHANGELOG',
+        description: 'Free-form text that can be added to the report',
+        defaultValue: 'This is the change log')
+    }
+    stages {
+        stage('Test') {
+            steps {
+                echo "This step tests the project"
+            }
+        }
+        stage('Deploy') {
+            when {
+                expression {
+                    params.ENVIRONMENT == "PRODUCTION"
+                }
+            }
+            steps {
+                echo "This stage deploys the project"
+            }
+        }
+        stage('Report') {
+            steps {
+                echo "This stage generates a report"
+                sh "printf \"${params.CHANGELOG}\" > ${params.ENVIRONMENT}.txt"
+                archiveArtifacts allowEmptyArchive: true, 
+                    artifacts: '*.txt', 
+                    fingerprint: true, 
+                    followSymlinks: false, 
+                    onlyIfSuccessful: true
+            }
+        }
+    }
+}
+```
+
 ## Notes
 
 - [ ] DevOps
