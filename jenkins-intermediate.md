@@ -27,7 +27,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Connect Jenkins to GitHub](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_02-connect-jenkins-to-github)
 - [x] [Run scripts from the pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_03-run-scripts-from-the-pipeline)
 - [x] [Add a status badge](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_04-add-a-status-badge)
-- [ ] 
+- [x] [Solution Connect Jenkins to GitHub](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_06-solution-connect-jenkins-to-github)
 
 
 
