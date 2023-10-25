@@ -6,6 +6,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
 
+## Steps Taken
 
 **Ch01**
 - [x] [Jenkins and the DevOps lifecycle](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_01-jenkins-and-the-devops-lifecycle)
