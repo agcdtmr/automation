@@ -2,9 +2,13 @@
 
 For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
+**Challenges:**
+- [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
+- [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
+
+
 **Ch01**
 - [x] [Jenkins and the DevOps lifecycle](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_01-jenkins-and-the-devops-lifecycle)
-- [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Solution: Deploy a Jenkins server](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch01/01_03-solution-deploy-a-jenkins-server)
 
 **Ch02**
@@ -14,7 +18,6 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Use variables in a pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_04-use-variables-in-a-pipeline)
 - [x] [Parameterize a pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_05-parameterize-a-pipeline)
 - [x] [Use conditional expressions and manual approvals](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_06-use-conditional-expressions-and-manual-approvals)
-- [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
 - [x] [Solution: Develop a parameterized pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_08-solution-develop-a-parameterized-pipeline)
 
 
