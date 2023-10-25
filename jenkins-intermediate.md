@@ -5,6 +5,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 **Challenges:**
 - [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
+- [ ] [Challenge #3: Connect Jenkins to GitHub]()
 
 ## Steps Taken
 
@@ -20,6 +21,14 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Parameterize a pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_05-parameterize-a-pipeline)
 - [x] [Use conditional expressions and manual approvals](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_06-use-conditional-expressions-and-manual-approvals)
 - [x] [Solution: Develop a parameterized pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch02/02_08-solution-develop-a-parameterized-pipeline)
+
+**Ch03**
+- [x] [Pipeline as code with Jenkinsfile](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_01-pipeline-as-code-with-jenkinsfile)
+- [x] [Connect Jenkins to GitHub](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_02-connect-jenkins-to-github)
+- [x] [Run scripts from the pipeline](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_03-run-scripts-from-the-pipeline)
+- [x] [Add a status badge](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_04-add-a-status-badge)
+- [ ] 
+
 
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
