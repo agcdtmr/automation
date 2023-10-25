@@ -2,7 +2,8 @@
 
 For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins Essential Training](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
 
-- [Challenge #1](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
+- [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
+- [Challenge #2: Develop a parameterized pipeline]()
 
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
