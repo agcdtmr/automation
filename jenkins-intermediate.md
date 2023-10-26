@@ -7,7 +7,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
 - [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
 - [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
-- [x] [Challenge: Create artifacts and reports]()
+- [x] [Challenge #5: Create artifacts and reports]()
 
 ## Steps Taken
 
@@ -131,11 +131,16 @@ pipeline {
 - Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge03
 - Github repo: https://github.com/agcdtmr/connect-jenkins-to-github
 
+
 ## Challenge #4: Improve a Docker agent pipeline
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_04-challenge-docker-agent
-- Solution:
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/Ch05
 - Github repo: https://github.com/agcdtmr/docker-agent
 
+
+## Challenge #5: Create artifacts and reports
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_04-challenge-create-artifacts-and-reports
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge05
 
 ## Notes
 
