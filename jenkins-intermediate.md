@@ -30,6 +30,13 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Solution: Connect Jenkins to GitHub](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_06-solution-connect-jenkins-to-github)
 
 
+**Ch04**
+- [x] [Distribute builds with agents]()
+- [ ] [Add an SSH agent to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_02-ssh-agent)
+- [ ] [Add Docker agents to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_03-docker-agent)
+- [ ] [Solution](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_05-solution-docker-agent)
+
+---
 
 ## Challenge #1: deploying a Jenkins server to use for this course. 
 
@@ -110,9 +117,14 @@ pipeline {
 }
 ```
 
-## Challenge #3:
+## Challenge #3: Connect Jenkins to GitHub
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_05-challenge-connect-jenkins-to-github
 - Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge03
+
+
+## Challenge #4: Improve a Docker agent pipeline
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_04-challenge-docker-agent
+- Solution: 
 
 
 ## Notes
@@ -147,6 +159,7 @@ pipeline {
 - [ ] Basic pipeline steps
 - [ ] pipeline syntax generator
 - [ ] Environment variables
+
 
 ---
 
