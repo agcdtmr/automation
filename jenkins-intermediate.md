@@ -111,8 +111,8 @@ pipeline {
 ```
 
 ## Challenge #3:
-- Challenge: 
-- Solution:
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_05-challenge-connect-jenkins-to-github
+- Solution: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_06-solution-connect-jenkins-to-github
 
 
 ## Notes
