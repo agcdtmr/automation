@@ -134,7 +134,7 @@ pipeline {
 
 ## Challenge #4: Improve a Docker agent pipeline
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_04-challenge-docker-agent
-- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/Ch05
+- Solution: 
 - Github repo: https://github.com/agcdtmr/docker-agent
 
 
