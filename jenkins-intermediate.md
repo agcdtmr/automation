@@ -6,7 +6,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
 - [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
-- [ ] [Challenge #4: Improve a Docker agent pipeline]()
+- [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
 
 ## Steps Taken
 
