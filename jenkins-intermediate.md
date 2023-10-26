@@ -473,6 +473,16 @@ The actual syntax and structure may vary depending on the pipeline configuration
 
 ---
 
-## Error fixing: 502 Bad Gateway nginx/1.18.0 (Ubuntu)
+### Error fixing: 502 Bad Gateway nginx/1.18.0 (Ubuntu)
 
 Solution: I need to access my Microsoft Azure portal again, and restart the vm where I am running the jenkins server.
+
+---
+
+### Embeddable
+
+The term "embeddable" refers to something that can be easily inserted or integrated into something else. It is often used in the context of technology and software to describe components, widgets, or code that can be seamlessly added to a website, application, or system. These embeddable elements are designed to work within the existing framework, providing specific functionality or content without requiring extensive modification of the host system.
+
+For example, an "embeddable video player" is a video player that can be easily inserted into a webpage by pasting a snippet of code, allowing the website to display and play videos without the need for custom programming. Similarly, an "embeddable map" might refer to a map widget that can be added to a website to display location information without building a map from scratch.
+
+The concept of embeddability is not limited to technology and can be applied to various fields where something can be integrated or inserted into another system or environment with minimal effort.
