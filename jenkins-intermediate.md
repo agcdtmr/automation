@@ -5,7 +5,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 **Challenges:**
 - [x] [Challenge #1: deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
-- [ ] [Challenge #3: Connect Jenkins to GitHub]()
+- [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
 
 ## Steps Taken
 
@@ -112,7 +112,7 @@ pipeline {
 
 ## Challenge #3:
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_05-challenge-connect-jenkins-to-github
-- Solution: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_06-solution-connect-jenkins-to-github
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge03
 
 
 ## Notes
