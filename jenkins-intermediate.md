@@ -121,11 +121,12 @@ pipeline {
 ## Challenge #3: Connect Jenkins to GitHub
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch03/03_05-challenge-connect-jenkins-to-github
 - Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge03
-
+- Github repo: https://github.com/agcdtmr/connect-jenkins-to-github
 
 ## Challenge #4: Improve a Docker agent pipeline
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_04-challenge-docker-agent
-- Solution: 
+- Solution:
+- Github repo: https://github.com/agcdtmr/docker-agent
 
 
 ## Notes
