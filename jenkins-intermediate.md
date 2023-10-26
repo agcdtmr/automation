@@ -486,3 +486,35 @@ The term "embeddable" refers to something that can be easily inserted or integra
 For example, an "embeddable video player" is a video player that can be easily inserted into a webpage by pasting a snippet of code, allowing the website to display and play videos without the need for custom programming. Similarly, an "embeddable map" might refer to a map widget that can be added to a website to display location information without building a map from scratch.
 
 The concept of embeddability is not limited to technology and can be applied to various fields where something can be integrated or inserted into another system or environment with minimal effort.
+
+---
+
+### Build Triggers
+
+In Jenkins, build triggers are actions or events that initiate the execution of a Jenkins job or pipeline. There are various types of build triggers in Jenkins, and you can configure them to start a job automatically when specific conditions are met. Here are some common build triggers in Jenkins:
+
+1. **SCM (Source Code Management) Trigger**: This trigger starts a build when changes are detected in the version control system (e.g., Git, Subversion). It's a common choice for continuous integration.
+
+2. **Scheduled Trigger**: You can set up jobs to run at specific times or on a recurring schedule, using the "Build periodically" option in the job configuration.
+
+3. **Upstream/Downstream Projects Trigger**: Jobs can trigger other jobs based on their success or failure. For example, you can configure a downstream job to start when an upstream job completes successfully.
+
+4. **Webhook Trigger**: Jenkins can be integrated with other systems, and webhooks can be set up to start a Jenkins job when an external event occurs, such as a code repository push.
+
+5. **Manual Trigger**: You can configure a job to be triggered manually by users. This is useful when human intervention is required before a build or deployment.
+
+To set up a build trigger in Jenkins, follow these general steps:
+
+1. **Create or Configure a Jenkins Job**: If you don't have a job already, create a new one or configure an existing job that you want to trigger.
+
+2. **Configure Build Triggers**:
+   - For SCM triggers, you would specify the repository URL and polling schedule.
+   - For scheduled triggers, use the "Build periodically" option.
+   - For upstream/downstream triggers, specify the related projects in the job configuration.
+   - For webhooks, configure the external system to send a webhook to your Jenkins server, and set up a Jenkins job to listen for the webhook event.
+
+3. **Save and Apply**: Save your job configuration after setting up the build trigger.
+
+When the specified trigger conditions are met, Jenkins will automatically start the job or pipeline.
+
+Remember that Jenkins provides a wide range of plugins, and the exact steps to set up build triggers may vary depending on the plugins you have installed and the specific requirements of your project. It's important to refer to Jenkins documentation and any relevant plugin documentation for detailed and up-to-date instructions.
