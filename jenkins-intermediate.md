@@ -7,6 +7,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
 - [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
 - [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
+- [x] [Challenge: Create artifacts and reports]()
 
 ## Steps Taken
 
@@ -36,6 +37,13 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [ ] [Add an SSH agent to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_02-ssh-agent)
 - [ ] [Add Docker agents to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_03-docker-agent)
 - [ ] [Solution](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_05-solution-docker-agent)
+
+
+**Ch05**
+- [x] [Artifacts and fingerprinting](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_01-artifacts-and-fingerprinting)
+- [x] [Publish test results and code coverage reports](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_02-publish-reports)
+- [x] [Use test results to stop a build](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_03-using-test-results)
+- [x] [Solution: Create artifacts and reports](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_05-solution-create-artifacts-and-reports)
 
 ---
 
