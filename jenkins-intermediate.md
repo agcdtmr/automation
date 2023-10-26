@@ -533,3 +533,37 @@ To set up a build trigger in Jenkins, follow these general steps:
 When the specified trigger conditions are met, Jenkins will automatically start the job or pipeline.
 
 Remember that Jenkins provides a wide range of plugins, and the exact steps to set up build triggers may vary depending on the plugins you have installed and the specific requirements of your project. It's important to refer to Jenkins documentation and any relevant plugin documentation for detailed and up-to-date instructions.
+
+---
+
+### Error fixing: Maven version failure
+
+```
+Started by user admin
+Obtained Jenkinsfile from git https://github.com/agcdtmr/create-artifacts-and-reports.git
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+WorkflowScript: 6: Tool type "maven" does not have an install of "Maven3" configured - did you mean "Maven-3.8.4"? @ line 6, column 15.
+           maven 'Maven3' // 'Maven3' is the name of the Maven tool configured in Jenkins
+                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1107)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:580)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:526)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: FAILURE
+```
+
+**Solution: Edit the Jenkinsfile and match the Maven version from the one installed on the Jenkins server. Which is 'Maven3.8.4'**
