@@ -1,6 +1,7 @@
 # Jenkins Intermediate
 
-For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://www.linkedin.com/learning/jenkins-essential-training-17420152).
+For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://www.linkedin.com/learning/jenkins-essential-training-17420152). See my [certificate](https://github.com/agcdtmr/automation/commit/853ccc723398c00e4054c15e1251261d6c702ef6).
+
 
 **Challenges:**
 - [x] [Challenge #1: Deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
@@ -9,6 +10,9 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
 - [x] [Challenge #5: Create artifacts and reports](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-5-create-artifacts-and-reports)
 - [x] [Challenge #6: Configure users and permissions](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-6-configure-users-and-permissions)
+
+![Jenkins Dashboard](https://github.com/agcdtmr/automation/blob/main/jenkins-dashboard.png)
+
 
 ## Steps Taken
 
