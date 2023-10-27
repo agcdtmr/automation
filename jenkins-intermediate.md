@@ -38,6 +38,8 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [ ] [Add Docker agents to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_03-docker-agent)
 - [ ] [Solution](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_05-solution-docker-agent)
 
+- [ ] Error fixing: https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate/Ch04-error.png
+
 
 **Ch05**
 - [x] [Artifacts and fingerprinting](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_01-artifacts-and-fingerprinting)
