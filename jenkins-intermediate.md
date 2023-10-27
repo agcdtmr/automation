@@ -155,6 +155,7 @@ pipeline {
 ## Challenge #6: Configure users and permissions
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_04-challenge-configure-users-and-permissions
 
+
 ---
 
 ## Notes
