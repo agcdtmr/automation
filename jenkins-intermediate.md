@@ -8,6 +8,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
 - [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
 - [x] [Challenge #5: Create artifacts and reports](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-5-create-artifacts-and-reports)
+- [x] [Challenge #6: Configure users and permissions]()
 
 ## Steps Taken
 
@@ -46,6 +47,13 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 - [x] [Publish test results and code coverage reports](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_02-publish-reports)
 - [x] [Use test results to stop a build](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_03-using-test-results)
 - [x] [Solution: Create artifacts and reports](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_05-solution-create-artifacts-and-reports)
+
+
+**Ch06**
+- [x] [Secure Jenkins with user accounts](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_01-secure-jenkins-with-user-acccounts)
+- [x] [Configure project-based permissions]()
+- [x] [Use secrets and credentials](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_03-use-secrets-and-credentials)
+- [x] [Solution: Configure users and permissions](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_05-solution-configure-users-and-permissions)
 
 ---
 
