@@ -51,7 +51,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 
 **Ch06**
 - [x] [Secure Jenkins with user accounts](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_01-secure-jenkins-with-user-acccounts)
-- [x] [Configure project-based permissions]()
+- [x] [Configure project-based permissions](https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge06-config-proj-based-permissions)
 - [x] [Use secrets and credentials](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_03-use-secrets-and-credentials)
 - [x] [Solution: Configure users and permissions](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_05-solution-configure-users-and-permissions)
 
