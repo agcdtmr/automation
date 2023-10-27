@@ -34,11 +34,10 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 
 
 **Ch04**
-- [x] [Distribute builds with agents]()
+- [x] Distribute builds with agents
 - [ ] [Add an SSH agent to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_02-ssh-agent)
 - [ ] [Add Docker agents to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_03-docker-agent)
 - [ ] [Solution](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_05-solution-docker-agent)
-
 - [ ] Error fixing: https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate/Ch04-error.png
 
 
@@ -154,7 +153,7 @@ pipeline {
 
 ## Challenge #6: Configure users and permissions
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_04-challenge-configure-users-and-permissions
-
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge06
 
 ---
 
