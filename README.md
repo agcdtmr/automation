@@ -9,5 +9,5 @@
 
 Currently doing:
 
-- [ ] [Jenkins CI/CD Using GitLab and Docker | Jenkins Deployment To Docker Container](https://github.com/agcdtmr/automation/blob/main/jenkins-gitlab.md)
+- [ ] [Jenkins + Gitlab](https://github.com/agcdtmr/automation/blob/main/jenkins-gitlab.md)
 
