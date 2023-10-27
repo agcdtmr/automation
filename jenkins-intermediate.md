@@ -152,6 +152,11 @@ pipeline {
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch05/05_04-challenge-create-artifacts-and-reports
 - Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge05
 
+## Challenge #6: Configure users and permissions
+- Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_04-challenge-configure-users-and-permissions
+
+---
+
 ## Notes
 
 - [ ] DevOps
