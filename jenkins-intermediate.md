@@ -582,3 +582,7 @@ Finished: FAILURE
 ```
 
 **Solution: Edit the Jenkinsfile and match the Maven version from the one installed on the Jenkins server. Which is 'Maven-3.8.4'**
+
+---
+
+### What is default security realm?
