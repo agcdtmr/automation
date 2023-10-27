@@ -1,6 +1,6 @@
 # Jenkins Intermediate
 
-For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://www.linkedin.com/learning/jenkins-essential-training-17420152). See my [certificate](https://github.com/agcdtmr/automation/commit/853ccc723398c00e4054c15e1251261d6c702ef6).
+For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://www.linkedin.com/learning/jenkins-essential-training-17420152). See my [certificate](https://github.com/agcdtmr/automation/blob/main/CertificateOfCompletion_Jenkins%20Essential%20Training.pdf).
 
 
 **Challenges:**
