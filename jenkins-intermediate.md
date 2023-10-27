@@ -5,7 +5,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 **Challenges:**
 - [x] [Challenge #1: Deploying a Jenkins server to use for this course](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-1-deploying-a-jenkins-server-to-use-for-this-course)
 - [x] [Challenge #2: Develop a parameterized pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-2-develop-a-parameterized-pipeline)
-- [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3)
+- [x] [Challenge #3: Connect Jenkins to GitHub](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-3-connect-jenkins-to-github)
 - [ ] [Challenge #4: Improve a Docker agent pipeline](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-4-improve-a-docker-agent-pipeline)
 - [x] [Challenge #5: Create artifacts and reports](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-5-create-artifacts-and-reports)
 - [x] [Challenge #6: Configure users and permissions](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md#challenge-6-configure-users-and-permissions)
@@ -34,11 +34,10 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 
 
 **Ch04**
-- [x] [Distribute builds with agents]()
+- [x] Distribute builds with agents
 - [ ] [Add an SSH agent to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_02-ssh-agent)
 - [ ] [Add Docker agents to Jenkins](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_03-docker-agent)
 - [ ] [Solution](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch04/04_05-solution-docker-agent)
-
 - [ ] Error fixing: https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate/Ch04-error.png
 
 
@@ -51,7 +50,7 @@ For this Intermediate Jenkins, I followed Linkedin Learning [Jenkins](https://ww
 
 **Ch06**
 - [x] [Secure Jenkins with user accounts](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_01-secure-jenkins-with-user-acccounts)
-- [x] [Configure project-based permissions]()
+- [x] [Configure project-based permissions](https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge06-config-proj-based-permissions)
 - [x] [Use secrets and credentials](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_03-use-secrets-and-credentials)
 - [x] [Solution: Configure users and permissions](https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_05-solution-configure-users-and-permissions)
 
@@ -154,6 +153,7 @@ pipeline {
 
 ## Challenge #6: Configure users and permissions
 - Challenge: https://github.com/agcdtmr/essential-jenkins-2468076/tree/main/Ch06/06_04-challenge-configure-users-and-permissions
+- Solution: https://github.com/agcdtmr/automation/tree/main/jenkins-intermediate/challenge06
 
 ---
 
