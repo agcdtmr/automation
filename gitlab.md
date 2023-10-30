@@ -4,11 +4,26 @@
 - [x] [Gitlab projects](https://github.com/agcdtmr/automation/tree/main/gitlab)
 
 
+## Terminology
+
+- [ ] Sequential DevOps vs. Concurrent DevSecOps
+
+
+
+
+
 ## Gitlab Basics
 
 - [x] [Gitlab Basics](https://www.linkedin.com/learning/learning-gitlab-14539757?trk=learning-topics_trending-courses_related-content-card&upsellOrderOrigin=default_guest_learning)
 - [x] [Certificate](https://github.com/agcdtmr/automation/blob/main/CertificateOfCompletion_Learning%20GitLab.pdf)
+- [x] [Gitlab Explained: What is Gitlab and Why Use It?](https://www.youtube.com/watch?v=bnF7f1zGpo4)
+- [x] [What is GitLab?](https://www.youtube.com/watch?v=MqL6BMOySIQ)
+- [x] [What is GitLab?](https://www.youtube.com/watch?v=0pOvg8QkKiw)
 
+
+## GitLab with Git Essentials
+
+- [x] [GitLab with Git Essentials](https://levelup.gitlab.com/courses/gitlab-with-git-essentials-s2)
 
 ## Continuous Integration and Continuous Delivery with GitLab
 
