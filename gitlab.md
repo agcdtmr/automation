@@ -10,8 +10,6 @@
 
 
 
-
-
 ## Gitlab Basics
 
 - [x] [Gitlab Basics](https://www.linkedin.com/learning/learning-gitlab-14539757?trk=learning-topics_trending-courses_related-content-card&upsellOrderOrigin=default_guest_learning)
