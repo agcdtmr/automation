@@ -1,7 +1,7 @@
 # automation
 
 Currently doing:
-- [ ] [Gitlab](https://about.gitlab.com/services/education/)
+- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
@@ -36,4 +36,5 @@ Jenkins
 
 Gitlab
 - [ ] https://about.gitlab.com/solutions/jenkins/
+- [ ] https://about.gitlab.com/services/education/
 - [ ] https://docs.gitlab.com/ee/integration/jenkins.html
