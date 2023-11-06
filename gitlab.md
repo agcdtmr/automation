@@ -32,7 +32,7 @@
 - [x] [A quick guide to GitLab CI/CD pipelines](https://about.gitlab.com/blog/2019/07/12/guide-to-ci-cd-pipelines/#:~:text=A%20GitLab%20pipeline%20executes%20several,same%20in%20a%20development%20environment.)
 
 
-## Learn GitLab with tutorials
+## [Learn GitLab with tutorials](https://docs.gitlab.com/ee/tutorials/)
 
 - [x] [Tutorials: Find your way around GitLab](https://docs.gitlab.com/ee/tutorials/gitlab_navigation.html)
 - [x] [Tutorials: Learn Git](https://docs.gitlab.com/ee/tutorials/learn_git.html)
@@ -42,6 +42,8 @@
 - [ ] [Tutorials: Develop with GitLab](https://docs.gitlab.com/ee/tutorials/develop.html)
 
 
+
+## [Use GitLab](https://docs.gitlab.com/ee/user/)
 
 ## Sources
 
