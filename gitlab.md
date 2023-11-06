@@ -17,6 +17,7 @@
 - [x] [Gitlab Explained: What is Gitlab and Why Use It?](https://www.youtube.com/watch?v=bnF7f1zGpo4)
 - [x] [What is GitLab?](https://www.youtube.com/watch?v=MqL6BMOySIQ)
 - [x] [What is GitLab?](https://www.youtube.com/watch?v=0pOvg8QkKiw)
+- [x] [GitLab with Git Essentials](https://levelup.gitlab.com/courses/gitlab-with-git-essentials-s2)
 
 
 ## GitLab with Git Essentials
