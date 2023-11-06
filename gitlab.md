@@ -46,4 +46,4 @@
 
 ## Sources
 
-- [Create a Jenkins Pipeline](https://about.gitlab.com/handbook/customer-success/demo-systems/tutorials/integrations/create-jenkins-pipeline/#overview)
+- [GitLab Education Services](https://about.gitlab.com/services/education/)
