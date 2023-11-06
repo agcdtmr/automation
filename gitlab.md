@@ -47,3 +47,4 @@
 ## Sources
 
 - [GitLab Education Services](https://about.gitlab.com/services/education/)
+- [GitLab Demo Portal](https://gitlabdemo.com/invite/30226e03-66f5-408c-b266-1870854238ac?token=7a20a101&type=normal)
