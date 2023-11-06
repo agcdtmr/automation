@@ -37,7 +37,7 @@
 - [x] [Tutorials: Find your way around GitLab](https://docs.gitlab.com/ee/tutorials/gitlab_navigation.html)
 - [x] [Tutorials: Learn Git](https://docs.gitlab.com/ee/tutorials/learn_git.html)
 - [x] [Tutorials: Plan and track your work](https://docs.gitlab.com/ee/tutorials/plan_and_track.html)
-- [ ] [Tutorials: Build your application](Tutorials: Secure your application and check compliance)
+- [ ] [Tutorials: Build your application](https://docs.gitlab.com/ee/tutorials/build_application.html)
 - [ ] [Tutorials: Manage your infrastructure](https://docs.gitlab.com/ee/tutorials/infrastructure.html)
 - [ ] [Tutorials: Develop with GitLab](https://docs.gitlab.com/ee/tutorials/develop.html)
 
