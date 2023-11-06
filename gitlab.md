@@ -40,7 +40,9 @@
 - [ ] [Tutorials: Manage your infrastructure](https://docs.gitlab.com/ee/tutorials/infrastructure.html)
 - [ ] [Tutorials: Develop with GitLab](https://docs.gitlab.com/ee/tutorials/develop.html)
 
+## [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 
+- [x] [Getting started with GitLab CI/CD](https://www.youtube.com/watch?v=sIegJaLy2ug)
 
 ## [Use GitLab](https://docs.gitlab.com/ee/user/)
 
