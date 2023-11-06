@@ -44,6 +44,8 @@
 
 - [x] [Getting started with GitLab CI/CD](https://www.youtube.com/watch?v=sIegJaLy2ug)
 
+## [GitLab Security Essentials](https://levelup.gitlab.com/learn/course/gitlab-security-essentials-s2)
+
 ## [Use GitLab](https://docs.gitlab.com/ee/user/)
 
 ## Sources
