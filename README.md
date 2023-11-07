@@ -1,12 +1,12 @@
 # automation
 
 Currently doing:
-- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
+- [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
 - [x] [Jenkins Intermediate](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md)
-
+- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
 
 
 ## Sources
