@@ -11,7 +11,7 @@ Steps taken:
 - [x] Install Jenkins
 - [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
 - [x] Installing Docker and setting up the environment
-- [x] [How to create jenkins container in docker]
+- [x] [How to create jenkins container in docker](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md#how-to-create-jenkins-container-in-docker)
 - [x] Successfully finished the course quizzes, [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221) and mini projects. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
 - [x] Create .gitignore file
