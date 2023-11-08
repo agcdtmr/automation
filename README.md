@@ -2,11 +2,12 @@
 
 Currently doing:
 - [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
+- [ ] [GitLab Jenkins Integration]()
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
 - [x] [Jenkins Intermediate](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md)
-- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
+- [x] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
 
 
 ## Sources
