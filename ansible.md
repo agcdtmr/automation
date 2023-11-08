@@ -16,3 +16,8 @@
 - run these against your local Ansible control node. 
 - the first task is going to have you ping the local Ansible system. 
 - the second task is going to have you display the details of those two text files. 
+
+
+## Sources
+
+- [Official documentation](https://docs.ansible.com/ansible/latest/getting_started/index.html)
