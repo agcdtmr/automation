@@ -1,3 +1,3 @@
 # GitLab Jenkins Integration
 
-- [ ] [GitLab Jenkins Integration](https://about.gitlab.com/solutions/jenkins/)
+- [ ] [GitLab Jenkins Integration Documentation](https://about.gitlab.com/solutions/jenkins/)
