@@ -11,6 +11,7 @@ Steps taken:
 - [x] Install Jenkins
 - [x] Reinstalling VSCode and fixing related error (I need this to have a better access to different branches)
 - [x] Installing Docker and setting up the environment
+- [x] [How to create jenkins container in docker]
 - [x] Successfully finished the course quizzes, [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221) and mini projects. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
 - [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
 - [x] Create .gitignore file
@@ -390,6 +391,67 @@ These steps update your project's Java source and target compatibility levels to
 - I was first using and running Jenkins locally. But because I don't have the right to push to the code base, I won't be able to use solution above. Now I will try to run it using a container / docker.
 
 **Solution: The docker environment was successfully configured. I noticed that on 03_01 "Using a global tool" module, the instructor used Maven 3.8.2 so I used that to not have any conflict anymore from the given github account.**
+
+## How to create jenkins container in docker
+
+To create a Jenkins container in Docker, you can use a Docker image that contains Jenkins and its dependencies. Jenkins provides an official Docker image that you can use. Here are the steps to create a Jenkins container in Docker:
+
+1. **Install Docker**: Make sure you have Docker installed on your system. You can download and install Docker from the official Docker website: https://docs.docker.com/get-docker/
+
+2. **Pull the Jenkins Docker Image**:
+
+   Open a terminal and run the following command to pull the official Jenkins Docker image:
+
+   ```bash
+   docker pull jenkins/jenkins:lts
+   ```
+
+   The `lts` tag refers to the Long-Term Support version of Jenkins. You can use other tags if you want different versions.
+
+3. **Create a Jenkins Data Volume (Optional)**:
+
+   It's a good practice to create a Docker volume to persist Jenkins data. This way, you won't lose your Jenkins configuration and job history when you remove the container. You can create a volume with the following command:
+
+   ```bash
+   docker volume create jenkins-data
+   ```
+
+4. **Run the Jenkins Container**:
+
+   You can run the Jenkins container using the following command:
+
+   ```bash
+   docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-master -v jenkins-data:/var/jenkins_home jenkins/jenkins:lts
+   ```
+
+   Explanation of the options:
+
+   - `-d`: Runs the container in detached mode.
+   - `-p 8080:8080 -p 50000:50000`: Maps the container's ports to the host system. Port 8080 is for the Jenkins web interface, and port 50000 is for the Jenkins agent communication.
+   - `--name jenkins-master`: Assigns the name "jenkins-master" to the container.
+   - `-v jenkins-data:/var/jenkins_home`: Mounts the previously created volume to the container, allowing Jenkins data to persist.
+
+5. **Access Jenkins Web Interface**:
+
+   After running the container, you can access the Jenkins web interface by opening a web browser and navigating to `http://localhost:8080` (or the appropriate IP address or hostname if you're not running it locally).
+
+6. **Unlock Jenkins**:
+
+   When you access Jenkins for the first time, you'll need to retrieve the initial administrator password from the container's log to unlock Jenkins. Run the following command to obtain the password:
+
+   ```bash
+   docker logs jenkins-master
+   ```
+
+   Look for the line containing "Please use the following password" in the logs.
+
+7. **Complete Jenkins Setup**:
+
+   Follow the instructions in the web interface to complete the initial setup. You can install plugins and create your Jenkins admin user.
+
+That's it! You now have a Jenkins container running in Docker, and you can start setting up your CI/CD pipelines and jobs. Remember to regularly back up your Jenkins data volume to prevent data loss.
+
+Note: Ensure that you have appropriate security measures in place for your Jenkins instance, especially if it's exposed to the internet or accessible by a large number of users.
 
 
 ## Types of jobs and roles that commonly use Jenkins:
