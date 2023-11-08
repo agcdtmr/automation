@@ -6,9 +6,9 @@
 
 ## Challenges
 
-- [x] Install Ansible
-- [x] Working with code in Ansible. Write yml file.
-- [x] Write a playbook with Ansible
+- [x] [Install Ansible](https://github.com/agcdtmr/automation/tree/main/ansible/install)
+- [x] [Working with code in Ansible. Write yml file.](https://github.com/agcdtmr/automation/tree/main/ansible/module)
+- [x] [Write a playbook with Ansible](https://github.com/agcdtmr/automation/tree/main/ansible/challenge)
 
 - create two text files in a directory of your choosing. 
 - create a Playbook with a single play that consists of two tasks. 
