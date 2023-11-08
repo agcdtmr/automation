@@ -9,6 +9,14 @@
 - [ ] Sequential DevOps vs. Concurrent DevSecOps
 
 
+## GitLab Anki's
+
+- [ ] [GitLab](https://quizlet.com/ca/793732777/gitlab-flash-cards/?setIdOrUsername=793732777)
+- [ ] [GitLab Certified Associate](https://quizlet.com/590781994/gitlab-certified-associate-flash-cards/)
+- [ ] [Learning GitLab](https://quizlet.com/722161830/learning-gitlab-flash-cards/)
+- [ ] [Gitlab](https://quizlet.com/354874141/gitlab-flash-cards/)
+- [ ] [Git Github Learn Quiz](https://quizlet.com/86156199/git-github-learn-quiz-flash-cards/)
+
 
 ## Gitlab Basics
 
@@ -40,13 +48,17 @@
 - [ ] [Tutorials: Manage your infrastructure](https://docs.gitlab.com/ee/tutorials/infrastructure.html)
 - [ ] [Tutorials: Develop with GitLab](https://docs.gitlab.com/ee/tutorials/develop.html)
 
+
 ## [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 
 - [x] [Getting started with GitLab CI/CD](https://www.youtube.com/watch?v=sIegJaLy2ug)
 
+
 ## [GitLab Security Essentials](https://levelup.gitlab.com/learn/course/gitlab-security-essentials-s2)
 
+
 ## [Use GitLab](https://docs.gitlab.com/ee/user/)
+
 
 ## Sources
 
