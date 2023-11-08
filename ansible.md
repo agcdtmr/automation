@@ -10,10 +10,8 @@
 - [x] Working with code in Ansible. Write yml file.
 - [x] Write a playbook with Ansible
 
----- create two text files in a directory of your choosing. 
----- create a Playbook with a single play that consists of two tasks. 
----- run these against your local Ansible control node. 
-
----- The first task is going to have you ping the local Ansible system. 
-
----- And the second task is going to have you display the details of those two text files. 
+- create two text files in a directory of your choosing. 
+- create a Playbook with a single play that consists of two tasks. 
+- run these against your local Ansible control node. 
+- the first task is going to have you ping the local Ansible system. 
+- the second task is going to have you display the details of those two text files. 
