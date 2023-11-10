@@ -1,7 +1,7 @@
 # automation
 
 Currently doing:
-- [ ] [NetOps (DevOps for Network Engineers): Automating Networks]()
+- [ ] [NetOps (DevOps for Network Engineers): Automating Networks](https://github.com/agcdtmr/automation/blob/main/netops.md)
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
