@@ -18,6 +18,10 @@
 - the second task is going to have you display the details of those two text files. 
 
 
+## Progress updates
+
+- Stopped because no cloud account anymore where I can create multiple virtual machines I can use to follow the tutorial.
+
 ## Sources
 
 - [Official documentation](https://docs.ansible.com/ansible/latest/getting_started/index.html)
