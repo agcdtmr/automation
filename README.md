@@ -1,8 +1,5 @@
 # automation
 
-Currently doing:
-
-
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
 - [x] [Jenkins Intermediate](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md)
@@ -10,6 +7,24 @@ Check out my progress:
 - [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
 - [ ] [GitLab Jenkins Integration](https://github.com/agcdtmr/automation/blob/main/gitLab-jenkins-integration.md)
 - [ ] [NetOps (DevOps for Network Engineers): Automating Networks](https://github.com/agcdtmr/automation/blob/main/netops.md)
+
+
+
+Currently doing:
+- [DevOps Foundations: Infrastructure as Code](https://www.linkedin.com/learning/devops-foundations-infrastructure-as-code-18965758/make-your-systems-better-with-infrastructure-as-code?u=2080948)
+- [DevOps Foundations: Continuous Delivery/Continuous Integration](https://www.linkedin.com/learning/devops-foundations-continuous-delivery-continuous-integration-14449917/devops-foundations-cd-ci?u=2080948)
+- [Learning Docker](https://www.linkedin.com/learning/learning-docker-17236240/get-up-and-running-quick-with-docker?u=2080948)
+- [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
+- [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
+- [Learning Chef](https://www.linkedin.com/learning/learning-chef/welcome?u=2080948)
+- [Learning NGINX](https://www.linkedin.com/learning/learning-nginx-17014605/what-is-nginx?u=2080948)
+- [PowerShell: Functions for Advanced Automation](https://www.linkedin.com/learning/powershell-functions-for-advanced-automation/advance-your-powershell-functions?u=2080948)
+- [Learning Terraform](https://www.linkedin.com/learning/learning-terraform-15575129/learn-terraform-for-your-cloud-infrastructure?u=2080948)
+- [Advanced Terraform](https://www.linkedin.com/learning/advanced-terraform-18720794/introduction-to-advanced-terraform?u=2080948)
+- [Terraform: Managing Network Infrastructure](https://www.linkedin.com/learning/terraform-managing-network-infrastructure/network-management-in-the-cloud?u=2080948)
+- [Kubernetes: Provisioning for Infrastructure as Code](https://www.linkedin.com/learning/kubernetes-provisioning-for-infrastructure-as-code/introduction?u=2080948)
+- [Learn Apache Kafka for Beginners](https://www.linkedin.com/learning/learn-apache-kafka-for-beginners-22305582/kafka-course-introduction?u=2080948)
+
 
 
 ## Sources
