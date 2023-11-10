@@ -1,6 +1,6 @@
 # NetOps (DevOps for Network Engineers): Automating Networks
 
-- Follow this [LinkedIn Learning](NetOps (DevOps for Network Engineers): Automating Networks)
+- Follow this [LinkedIn Learning](https://www.linkedin.com/learning/netops-devops-for-network-engineers-automating-networks?u=2080948)
 
 ## Learnings
 
@@ -16,3 +16,4 @@
 ## Sources
 
 - https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/
+- https://developer.cisco.com/site/sandbox/
