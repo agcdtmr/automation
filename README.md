@@ -1,14 +1,14 @@
 # automation
 
 Currently doing:
-- [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
-- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
-- [ ] [GitLab Jenkins Integration](https://github.com/agcdtmr/automation/blob/main/gitLab-jenkins-integration.md)
+- [ ] [NetOps (DevOps for Network Engineers): Automating Networks]()
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
 - [x] [Jenkins Intermediate](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md)
-
+- [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
+- [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
+- [ ] [GitLab Jenkins Integration](https://github.com/agcdtmr/automation/blob/main/gitLab-jenkins-integration.md)
 
 
 ## Sources
