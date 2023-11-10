@@ -3,21 +3,6 @@
 
 - [x] [Gitlab projects](https://github.com/agcdtmr/automation/tree/main/gitlab)
 
-
-## Terminology
-
-- [ ] Sequential DevOps vs. Concurrent DevSecOps
-
-
-## GitLab Anki's
-
-- [ ] [GitLab](https://quizlet.com/ca/793732777/gitlab-flash-cards/?setIdOrUsername=793732777)
-- [ ] [GitLab Certified Associate](https://quizlet.com/590781994/gitlab-certified-associate-flash-cards/)
-- [ ] [Learning GitLab](https://quizlet.com/722161830/learning-gitlab-flash-cards/)
-- [ ] [Gitlab](https://quizlet.com/354874141/gitlab-flash-cards/)
-- [ ] [Git Github Learn Quiz](https://quizlet.com/86156199/git-github-learn-quiz-flash-cards/)
-
-
 ## Gitlab Basics
 
 - [x] [Gitlab Basics](https://www.linkedin.com/learning/learning-gitlab-14539757?trk=learning-topics_trending-courses_related-content-card&upsellOrderOrigin=default_guest_learning)
@@ -58,6 +43,20 @@
 
 
 ## [Use GitLab](https://docs.gitlab.com/ee/user/)
+
+
+## Terminology
+
+- [ ] Sequential DevOps vs. Concurrent DevSecOps
+
+
+## GitLab Anki's
+
+- [ ] [GitLab](https://quizlet.com/ca/793732777/gitlab-flash-cards/?setIdOrUsername=793732777)
+- [ ] [GitLab Certified Associate](https://quizlet.com/590781994/gitlab-certified-associate-flash-cards/)
+- [ ] [Learning GitLab](https://quizlet.com/722161830/learning-gitlab-flash-cards/)
+- [ ] [Gitlab](https://quizlet.com/354874141/gitlab-flash-cards/)
+- [ ] [Git Github Learn Quiz](https://quizlet.com/86156199/git-github-learn-quiz-flash-cards/)
 
 
 ## Sources
