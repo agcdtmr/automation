@@ -1,5 +1,11 @@
 # automation
 
+Currently learning:
+
+- [ ] [Learning Docker](https://www.linkedin.com/learning/learning-docker-17236240)
+- [ ] [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
+- [ ] [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
+
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
 - [x] [Jenkins Intermediate](https://github.com/agcdtmr/automation/blob/main/jenkins-intermediate.md)
@@ -14,8 +20,6 @@ Planning to do:
 - [DevOps Foundations: Infrastructure as Code](https://www.linkedin.com/learning/devops-foundations-infrastructure-as-code-18965758/make-your-systems-better-with-infrastructure-as-code?u=2080948)
 - [DevOps Foundations: Continuous Delivery/Continuous Integration](https://www.linkedin.com/learning/devops-foundations-continuous-delivery-continuous-integration-14449917/devops-foundations-cd-ci?u=2080948)
 - [Learning Docker](https://www.linkedin.com/learning/learning-docker-17236240/get-up-and-running-quick-with-docker?u=2080948)
-- [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
-- [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
 - [Learning Chef](https://www.linkedin.com/learning/learning-chef/welcome?u=2080948)
 - [Learning NGINX](https://www.linkedin.com/learning/learning-nginx-17014605/what-is-nginx?u=2080948)
 - [PowerShell: Functions for Advanced Automation](https://www.linkedin.com/learning/powershell-functions-for-advanced-automation/advance-your-powershell-functions?u=2080948)
