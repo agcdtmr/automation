@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL maintainer="Carlos Nunez <dev@carlosnunez.me>"
+LABEL maintainer="anc"
 
 USER root
 
