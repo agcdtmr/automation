@@ -2,7 +2,7 @@
 
 Currently learning:
 
-- [ ] [Learning Docker](https://www.linkedin.com/learning/learning-docker-17236240)
+- [ ] [Learning Docker](https://github.com/agcdtmr/automation/blob/main/docker/docker.md)
 - [ ] [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
 - [ ] [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
 
