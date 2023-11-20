@@ -1,6 +1,6 @@
 # Docker
 
-
+- [ ] [The New IT Girl](https://github.com/agcdtmr/automation/blob/main/kubernetes/slides.pdf)
 
 
 ## [Learning Docker](https://www.linkedin.com/learning/learning-docker-17236240)
