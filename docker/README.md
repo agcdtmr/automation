@@ -119,6 +119,13 @@ docker ps -aq
 ```
 
 
+## Port binding
+
+```docker run -d --name hopeful_leakey -p 5001:5000 our-web-server```
+
+
+
+
 remove and stop all the containers that are running
 ```
 docker ps -aq | xargs docker rm
