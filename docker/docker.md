@@ -82,3 +82,44 @@ This `web-server.bash` file is like a set of instructions for our container to b
 - Finally, `start_server`: Actually starts the server by running the `start_server` action.
 
 In simple terms, this file creates a basic web server. When someone visits `http://localhost:5000` in a web browser on the computer where this server is running, it will show a page saying "Hello! Today's date is [current date]."
+
+```
+docker --help
+docker container create --help
+docker container create hello-world:linux
+docker ps
+docker ps -all
+docker container start <id>
+docker ps -all
+docker logs <id>
+docker container start --attach <id>
+```
+
+
+```
+docker run hello-world:linux
+```
+
+
+```
+docker build -t our-first-image .
+docker run our-first-image
+```
+
+
+
+```
+docker build --file server.Dockerfile --tag our-first-server .
+```
+
+
+Show list of containers only ID
+```
+docker ps -aq
+```
+
+
+remove and stop all the containers that are running
+```
+docker ps -aq | xargs docker rm
+```
