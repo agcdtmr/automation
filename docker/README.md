@@ -126,7 +126,16 @@ docker ps -aq
 
 
 
-remove and stop all the containers that are running
+# Remove and stop all the containers that are running
 ```
 docker ps -aq | xargs docker rm
+```
+
+
+# Docker run command combination
+
+```
+docker container create
+docker container start
+docker container attach
 ```
