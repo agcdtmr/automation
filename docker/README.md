@@ -7,7 +7,7 @@
 
 - Why do ports binding?
 
-web-server.Dockerfile 
+## web-server.Dockerfile 
 ```
 FROM ubuntu
 LABEL maintainer="Carlos Nunez <dev@carlosnunez.me>"
@@ -45,7 +45,7 @@ This Dockerfile appears to set up a basic web server within a Docker container u
 This Dockerfile, when used to build a Docker image and run a container, sets up a basic web server by executing the `web-server.bash` script as the entry point for the container. The script likely contains commands to start a simple web server or perform other necessary tasks to serve web content.
 
 
-web-server.bash   
+## web-server.bash   
 ```   
 #!/usr/bin/env bash
 
@@ -113,7 +113,7 @@ docker build --file server.Dockerfile --tag our-first-server .
 ```
 
 
-Show list of containers only ID
+## Show list of containers only ID
 ```
 docker ps -aq
 ```
@@ -126,16 +126,21 @@ docker ps -aq
 
 
 
-# Remove and stop all the containers that are running
+## Remove and stop all the containers that are running
 ```
 docker ps -aq | xargs docker rm
 ```
 
 
-# Docker run command combination
+## Docker run command combination
 
 ```
 docker container create
 docker container start
 docker container attach
 ```
+
+
+## docker exec -i -t 2bf bash
+
+This starts an interactive Bash shell within a container starting with ID 2bf with a pseudo-TTY allocated to it.
