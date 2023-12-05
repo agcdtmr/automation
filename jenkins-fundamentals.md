@@ -13,7 +13,7 @@ Steps taken:
 - [x] Installing Docker and setting up the environment
 - [x] [How to create jenkins container in docker](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md#how-to-create-jenkins-container-in-docker)
 - [x] Successfully finished the course quizzes, [modules](https://github.com/LinkedInLearning/learning-jenkins-3003221) and mini projects. Check my certificate [here](https://github.com/agcdtmr/learn-jenkins/blob/main/CertificateOfCompletion_Learning%20Jenkins.pdf).
-- [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/learn-jenkins/tree/main/images).
+- [x] Look at the mini [jenkins projects](https://github.com/agcdtmr/automation/tree/main/jenkins-fundamentals).
 - [x] Create .gitignore file
 - [x] Pause jenkins container on Docker and because I first used jenkins locally I also needed to stop that jenkins service using homebrew.
 
