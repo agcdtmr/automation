@@ -163,7 +163,7 @@ pipeline {
 
 ---
 
-## Notes
+## Terminology
 
 - [ ] DevOps
 - [ ] Planning, Development and Operation
