@@ -188,6 +188,8 @@ minikube delete
 
 ### Reading and Writing YAML
 
+What is YAML? YAML is the data serialization language commonly used to create Kubernetes objects. YAML enables us to declare what we want to be true about our cluster and save those files for Infrastructure as Code and a GitOps workflow.
+
 ```
 ---  # three horizontal dashes on a line of its own means that it is the beginning of a document
 # Write here a comment what this all about.
@@ -207,3 +209,104 @@ jobs:
     - Web Development Instructor
     - Instructional Designer
 ```
+
+Notes and tips:
+
+- YAML files can either have the dot yaml or dot yml extension.
+- Validate yaml file at yamlchecker.com
+
+### Namespaces
+
+- [x] Create a namespace
+
+```
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+```
+
+- [x] run:
+
+```
+kubectl apply -f <name of this .yaml file>
+```
+
+Output:
+`namespace/development created`
+
+- [x] To confirm:
+
+```
+kubectl get namespaces
+```
+
+Output:
+
+```
+NAME              STATUS   AGE
+default           Active   4h4m
+development       Active   21s
+kube-node-lease   Active   4h4m
+kube-public       Active   4h4m
+kube-system       Active   4h4m
+```
+
+- [x] Improve the yaml file
+
+```
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: production
+```
+
+- [x] Rerun:
+
+```
+kubectl apply -f <name of this .yaml file>
+```
+
+Output:
+`namespace/development unchanged
+namespace/production created`
+
+- [x] To confirm rerun:
+
+```
+kubectl get namespaces
+```
+
+Output:
+
+```
+NAME              STATUS   AGE
+default           Active   4h13m
+development       Active   9m33s
+kube-node-lease   Active   4h13m
+kube-public       Active   4h13m
+kube-system       Active   4h13m
+production        Active   35s
+```
+
+- [x] To delete these namespaces
+
+```
+kubectl delete -f <name of this .yaml file>
+```
+
+Output:
+
+```
+namespace "development" deleted
+namespace "production" deleted
+```
+
+### Let's deploy an application
