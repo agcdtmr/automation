@@ -310,3 +310,5 @@ namespace "production" deleted
 ```
 
 ### Let's deploy an application
+
+In this mini project, Kubernetes Deployment configuration is written in YAML, and it's defining how to run a set of three instances (replicas) of a containerized application called "pod-info-app
