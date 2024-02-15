@@ -2,7 +2,7 @@
 
 Currently learning:
 
-- [x] [Kubernetes]()
+- [x] [Kubernetes](https://github.com/agcdtmr/automation/tree/main/kubernetes/kim-kubernetes)
 
 
 Check out my progress:
