@@ -60,6 +60,34 @@ High-level understanding of container technology
 
 - What is different about Docker installation for macOS compared to Windows? The macOS installation process considers the chip family on the machine. The Docker installation package for macOS is different for Intel and Apple chips.
 
+- Using the describe pod command, what will the event log show for a pod that has been running for a long time? The event log will show as empty. If a pod has been running for a while, Kubernetes will assume it is healthy and not show its events.
+
+- Which kubectl command can you use to list all the pods in a specific namespace? kubectl get pods -n mynamespace
+
+- In the following command structure that connects you to a BusyBox shell, what should you set for arg2?
+  kubectl exec arg1 arg2 arg3.... the name of the BusyBox pod
+
+- What will be the outcome of the following command? kubectl get pods... All pods in the default namespace will be listed. With no namespace specified, the command will result in all the pods in the default namespace being listed.
+
+- Pod A with an IP address of 172.17.0.3 is running a web server. On pod B on the cluster, running wget 172.17.0.3 results in a refused connection. What is one immediate thing to check? Pod A is exposing port 80. Pod A should expose the port that the "wget" command is trying to call (defaulting to 80).
+
+- Which character or sequence of characters will you use in YAML to represent a sequence? -
+
+- What additional information will show when the -o wide option is added to the kubectl get pods command? The IP address will show for all listed pods.
+
+- Which path in the deployment YAML file specifies the number of instances to run? spec -> replicas
+
+- What represents a valid namespace YAML?
+
+<!-- ---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mynamespace -->
+
+- What is the immediate parent of the following line? containerPort: 8080... ports:
+
 ## Getting Started
 
 In this project I am using:
@@ -473,3 +501,260 @@ pod-info-deployment-7587d5cc86-fddse 1/1 Running 8 (2m34s ago) 19m
 pod-info-deployment-7587d5cc86-lfljm 1/1 Running 8 (2m34s ago) 19m
 pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
 ```
+
+## Pods Healthcheck
+
+Most issues with pods occur in the first minute of their life cycle. The beginning of a pod's life is perilous. So many things can go wrong. The container image can be unavailable, causing an error. You could be out of space on your worker nodes, so the pod can't be scheduled. Or a typo can cause the pod to start running, but suddenly stop. Kubernetes saves the event logs when a pod is created, and if you know how to view these, you can troubleshoot issues.
+
+- [x] The first step is to find the pod whose event logs you'd like to view.
+
+```
+kubectl get pods -n development
+```
+
+Output:
+
+```
+NAME READY STATUS RESTARTS AGE
+pod-info-deployment-7587d5cc86-fddse 1/1 Running 8 (2m34s ago) 19m
+pod-info-deployment-7587d5cc86-lfljm 1/1 Running 8 (2m34s ago) 19m
+pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
+```
+
+- [x] Check pod event log
+
+kubectl describe pod <pod name> -n <namespace>
+
+Unhealthy pod sample:
+
+```
+Name:             pod-info-deployment-7587d5cc86-5r2xm
+Namespace:        development
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Thu, 15 Feb 2024 10:50:26 +0100
+Labels:           app=pod-info
+                  pod-template-hash=7587d5cc86
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.10
+IPs:
+  IP:           10.244.0.10
+Controlled By:  ReplicaSet/pod-info-deployment-7587d5cc86
+Containers:
+  pod-info-container:
+    Container ID:   docker://79a49b7679b47c566db4f1d307c4f11302c5d9ffc680adb0a0fd1a660c1f91ad
+    Image:          kimschles/pod-info-app:latest
+    Image ID:       docker-pullable://kimschles/pod-info-app@sha256:0feb76f0445f658b727f33aaadd72c8afe03c69a08cff8bb110ac66c48a7a9ba
+    Port:           3000/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Thu, 15 Feb 2024 11:17:03 +0100
+      Finished:     Thu, 15 Feb 2024 11:17:03 +0100
+    Ready:          False
+    Restart Count:  10
+    Environment:
+      POD_NAME:       pod-info-deployment-7587d5cc86-5r2xm (v1:metadata.name)
+      POD_NAMESPACE:  development (v1:metadata.namespace)
+      POD_IP:          (v1:status.podIP)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hp9jl (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+Volumes:
+  kube-api-access-hp9jl:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  30m                  default-scheduler  Successfully assigned development/pod-info-deployment-7587d5cc86-5r2xm to minikube
+  Normal   Pulled     30m                  kubelet            Successfully pulled image "kimschles/pod-info-app:latest" in 1.099s (3.306s including waiting)
+  Normal   Pulled     30m                  kubelet            Successfully pulled image "kimschles/pod-info-app:latest" in 1.053s (2.96s including waiting)
+  Normal   Pulled     30m                  kubelet            Successfully pulled image "kimschles/pod-info-app:latest" in 1.887s (1.887s including waiting)
+  Normal   Created    29m (x4 over 30m)    kubelet            Created container pod-info-container
+  Normal   Started    29m (x4 over 30m)    kubelet            Started container pod-info-container
+  Normal   Pulled     29m                  kubelet            Successfully pulled image "kimschles/pod-info-app:latest" in 1.078s (1.078s including waiting)
+  Normal   Pulling    28m (x5 over 30m)    kubelet            Pulling image "kimschles/pod-info-app:latest"
+  Warning  BackOff    25s (x143 over 30m)  kubelet            Back-off restarting failed container pod-info-container in pod pod-info-deployment-7587d5cc86-5r2xm_development(24cf7520-9f7d-4030-bfb9-de25ab27fb7a)
+```
+
+## Application is working as expected? But how can you check?
+
+Tool: BusyBox -- good tool for debugging and troubleshooting issues in a Linux environment and Kubernetes runs on Linux
+
+- find and open the BusyBox dot YAML file. Like we did with our application, we're going to use a deployment to create the BusyBox pod. Unlike our other deployment, we're going to deploy this in our default namespace and run only one replica.
+
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox
+  namespace: default
+  labels:
+    app: busybox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+        - name: busybox-container
+          image: busybox:latest
+          # Keep the container running
+          command: ["/bin/sh", "-c", "--"]
+          args: ["while true; do sleep 30; done;"]
+          resources:
+            requests:
+              cpu: 30m
+              memory: 64Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi
+```
+
+```
+kubectl apply -f busybox.yaml
+```
+
+```
+deployment.apps/busybox created
+```
+
+- check and see that the BusyBox Pod is up and running
+
+kubectl get pods
+
+NAME READY STATUS RESTARTS AGE
+busybox-74b7c48b46-xsxr2 1/1 Running 0 4m47s
+
+Notice in that last command, I didn't specify a name space, which is fine because if you don't, kubectl assumes you want the objects in the default name space.
+
+kubectl get pods -n development -o wide
+NAME READY STATUS RESTARTS AGE IP NODE NOMINATED NODE READINESS GATES
+pod-info-deployment-7587d5cc86-5r2xm 0/1 CrashLoopBackOff 31 (5m13s ago) 146m 10.244.0.10 minikube <none> <none>
+pod-info-deployment-7587d5cc86-7xlrd 0/1 CrashLoopBackOff 31 (5m4s ago) 146m 10.244.0.9 minikube <none> <none>
+pod-info-deployment-7587d5cc86-g2mb8 0/1 Error 32 (5m14s ago) 146m 10.244.0.8 minikube <none> <none>
+
+kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
+
+/ # wget
+
+/ # wget 10.244.0.10
+
+Connecting to 10.244.0.10 (10.244.0.10:80)
+wget: can't connect to remote host (10.244.0.10): Connection refused
+
+/ # wget 10.244.0.10:3000
+
+Connecting to 10.244.0.10:3000 (10.244.0.10:3000)
+
+/ # exit
+
+Tool: Application logs
+
+kubectl get pods -n development
+
+NAME READY STATUS RESTARTS AGE
+pod-info-deployment-7587d5cc86-5r2xm 0/1 CrashLoopBackOff 38 (4m27s ago) 3h8m
+pod-info-deployment-7587d5cc86-7xlrd 0/1 CrashLoopBackOff 38 (4m25s ago) 3h8m
+pod-info-deployment-7587d5cc86-g2mb8 0/1 CrashLoopBackOff 38 (4m22s ago) 3h8m
+
+kubectl logs <pod name> -n development
+
+ex.
+kubectl logs pod-info-deployment-7587d5cc86-5r2xm -n development
+
+## Deploy another application
+
+Create a new deployment in a file called quote.yaml.
+Name the deployment and name the app label quote-service.
+Use the development namespace.
+Name the container quote-container.
+Run two replicas.
+Use the image datawire/quote:0.5.0.
+Set the container to accept traffic at port 8080.
+Create the pods using kubectl apply -f quote.yaml.
+
+Optional and it's quite a stretch.
+
+- To use BusyBox to test that the application can accept traffic from inside the cluster.
+
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quote-service-deployment
+  namespace: development
+  labels:
+    app: quote-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quote-service
+  template:
+    metadata:
+      labels:
+        app: quote-service
+    spec:
+      containers:
+        - name: quote-container
+          image: datawire/quote:0.5.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+```
+
+% kubectl apply -f quote.yaml
+deployment.apps/quote-service-deployment created
+
+% kubectl get deployments -n development
+NAME READY UP-TO-DATE AVAILABLE AGE
+quote-service-deployment 2/2 2 0 63s
+
+--- BusyBox
+kubectl get pods
+
+busybox-74b7c48b46-xsxr2
+10.244.0.14
+
+kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
+whoami
+wget 10.244.0.14:8080
+cat index.html
