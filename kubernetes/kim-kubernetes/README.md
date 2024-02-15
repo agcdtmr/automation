@@ -88,6 +88,30 @@ metadata:
 
 - What is the immediate parent of the following line? containerPort: 8080... ports:
 
+- Your deployment YAML has the following configuration. What should your service YAML include so traffic is directed properly?
+metadata:
+  labels:
+    app: pod-info
+
+
+spec:
+  selector:
+    app: pod-info
+
+- What is not a type of service that Kubernetes offers? AddressPool is not a service type that Kubernetes supports.
+
+- The term "resources" refers to the available bandwidth and memory on a worker node. False
+
+- In a deployment YAML file, what is the immediate parent under which the resource request and limit specifications should be placed? Since the resources apply to a container, they should be specified under the container's block.
+
+- In the context of resource requests and limits to a pod, what do resources refer to? available CPU and memory on the worker node
+
+- What will the following command do? minikube delete... This command will delete the entire minikube cluster.
+
+- How would you delete a Kubernetes deployment created with a YAML manifest called api.yaml? kubectl delete -f api.yaml
+
+- When you want someone to access an application deployed in your Kubernetes cluster, you will set up a Kubernetes _____ Service. LoadBalancer
+
 ## Getting Started
 
 In this project I am using:
@@ -775,3 +799,140 @@ whoami
 wget 10.244.0.14:8080
 cat index.html
 ```
+
+
+
+## Kubernetes Service: Expose application to the internet with a LoadBalancer
+
+- Up until this point, we've deployed an application, but we've only been able to access it by using a busybox container inside the cluster. How do you expose your application to the internet? The answer is called a Kubernetes service. A Kubernetes service is a load balancer that directs traffic from the internet to Kubernetes pods. A load balancer service has a public and static IP address. The public IP address means that anyone can access it from the internet, and the static part is important because your pods and their IP addresses change frequently, but your service IP needs to remain the same.
+
+- Make sure you install and start your minikube then run:
+
+minikube tunnel
+
+
+
+- Create a yaml file and run:
+
+kubectl apply -f service.yaml       
+
+yaml file
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: development
+spec:
+  selector:
+    app: pod-info
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
+```
+
+- [x] confirm by listing all the deployments in the development namespace with the command
+
+```
+kubectl get services -n development
+```
+
+```
+NAME           TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+demo-service   LoadBalancer   10.109.29.96   127.0.0.1     80:32074/TCP   5m1s
+```
+
+- run:
+
+```
+minikube tunnel
+```
+
+```
+✅  Tunnel successfully started
+
+📌  NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+❗  The service/ingress demo-service requires privileged ports to be exposed: [80]
+🔑  sudo permission will be asked for it.
+🏃  Starting tunnel for service demo-service.
+```
+
+- copy EXTERNAL-IP to a browser
+
+
+## Add resource requests and limits to your pod
+
+```
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-deployment
+  namespace: development
+  labels:
+    app: pod-info
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-info
+  template:
+    metadata:
+      labels:
+        app: pod-info
+    spec:
+      containers:
+      - name: pod-info-container
+        image: kimschles/pod-info-app:latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+        env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+```
+
+kubectl apply -f deployment.yaml                                           
+deployment.apps/pod-info-deployment created
+
+kubectl get pods -n development
+NAME                                   READY   STATUS    RESTARTS   AGE
+pod-info-deployment-7d75675b59-xt724   1/1     Running   0          45s
+
+## Delete your Kubernetes objects and tear down your cluster
+
+kubectl delete -f busybox.yaml
+kubectl delete -f deployment.yaml
+kubectl delete -f quote.yaml 
+kubectl delete -f service.yaml
+kubectl delete -f loadbalancer.yaml 
+kubectl delete -f namespace.yaml   
+
+minikube delete
+
+## The Kubernetes control plane
+
+- To see all the Kubernetes objects and their API version, 
+kubectl api-resources
+
+-  listing all pods running in the kube system name space 
+kubectl -n kube-system get pods
