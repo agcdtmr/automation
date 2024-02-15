@@ -112,6 +112,37 @@ spec:
 
 - When you want someone to access an application deployed in your Kubernetes cluster, you will set up a Kubernetes _____ Service. LoadBalancer
 
+- What is an instance of Kubernetes called? a cluster
+
+- Which component communicates directly with the etcd component? API Server. Only the Kube API Server component can communicate directly with etcd.
+
+- Which control plane component stores the data about the state of the cluster? etcd
+
+- What function does the Kubelet component perform on a worker load? Check that the containers are healthy.
+
+- What are the three components on every worker node? kubelet, container runtime interface, and kube-proxy
+
+- The kube-proxy is the only worker node component that communicates with the kube-apiserver. FALSE. The kubelet is the only worker node component that communicates with the kube-apiserver.
+
+- Kubernetes v1.24 removed the Dockershim. How has this change impacted Kubernetes? Kubernetes can no longer use the Docker engine to run containers.
+
+
+- When you launch a pod with a new container image, which component pulls the image from the image repository? kubelet
+
+- When the user is applying a new deployment, which two Kubernetes components are involved in the actual step of binding a pod to a node? api-server and kubelet
+
+- Which of these is not a component of the Kubernetes Control Plane? kubelet
+
+- You need to run an application that performs a one-time extract, transform, load (ETL) operation that transfers data from a SQL database to a data warehouse. What is the best way to run these application pods? A Kubernetes Job will spin up a pod, run the container until its task is complete, and then terminate the pod. A Job is best for applications that perform one-time operations, like an ETL.
+
+- Which of the following is a way of setting up data storage inside a Kubernetes cluster? persistent volume
+
+- Which option will work best to run containers that are agents? DaemonSets allow you to run one pod per node, which works well for running pods implementing background processes such as agents.
+
+- What is the immediate parent under which the securityContext definition should be placed? Since the security context is defined per container, it needs to be placed inside its container's block.
+
+- Which service or object is associated with Kubernetes persistent volumes? A statefulSet is an object that lets an updated Kubernetes application communicate with the same volume as the previous pod.
+
 ## Getting Started
 
 In this project I am using:
@@ -931,8 +962,74 @@ minikube delete
 
 ## The Kubernetes control plane
 
-- To see all the Kubernetes objects and their API version, 
+An instance of Kubernetes is called a cluster, and each cluster has a control plane and at least one worker node. 
+
+The Kubernetes control plane contains the components that manage a cluster and enable the resiliency and automation that make Kubernetes such a popular container orchestrator.
+
+Cluster ---- a control plane and atleast 1 worker node
+
+Control Plane ---- API  --- REST interface --- CLI tools: kubectl or kubeadm
+
+- To see all the Kubernetes objects and their API version and this is also just a pod
 kubectl api-resources
+
 
 -  listing all pods running in the kube system name space 
 kubectl -n kube-system get pods
+
+
+Cluster ---- Control Plane ---- API  --- etcd --- 
+
+- Etcd is an open-source, highly available key value store, and in a Kubernetes cluster, it saves all data about the state of the cluster. Only the Kube API server can communicate directly with etcd. Etcd is also run as a pod
+
+kubectl logs etcd-minikube -n kube-system | jq .
+
+
+Cluster ---- Control Plane ---- API  --- scheduler --- 
+
+- which identifies newly created pods that have not been assigned a worker node and then chooses a node for the pod to run on
+
+Cluster ---- Control Plane ---- API  --- controller manager --- 
+
+- The controller manager is a loop that runs continually and checks the status of the cluster to make sure things are running properly. For example, the controller manager checks that all worker nodes are up and running, and if it finds that something is broken, it will remove the broken node and replace it with a new worker node. The controller manager creates and checks several other things in a cluster.
+
+Cluster ---- Control Plane ---- API  --- cloud controller manager --- 
+
+- which lets you connect your cluster with a cloud provider's API so you can use cloud resources from AWS, GCP, Azure, or any public cloud
+
+
+One note, if you're using a managed Kubernetes service like AWS's EKS or Google's GKE, you will not be able to see your control plane nodes using kubectl, those are hidden because the cloud provider handles all the maintenance of those components for you.
+
+## ## The Kubernetes worker nodes
+
+If Kubernetes is like an airport, the control plane is like the air traffic control tower, and the worker nodes are like the busy terminals, where planes park and passengers board.
+
+Cluster ---- worker nodes (atleast 3) ---- kubelet
+
+- The Kubelet is an agent that runs on every worker node, and it makes sure that the containers in a pod have started running and are healthy. The Kubelet communicates directly with the API server in the control plane, and it is looking for newly assigned pods
+
+Cluster ---- worker nodes (atleast 3) ---- container runtime
+
+- Once the Kubelet has been assigned a new pod, it starts the container or containers using the container runtime interface, or CRI. The CRI enables the Kubelet to create containers with the engines containerd, CRI-O, Kata Containers, and AWS Firecracker
+
+Cluster ---- worker nodes (atleast 3) ---- Kube-proxy
+
+The Kube-proxy makes sure that your pods and services can communicate with other pods and services on nodes, and in the control plane. Each Kube-proxy communicates directly with the Kube-APIserver.
+
+## How the control plane and worker node work together to create a pod
+
+## Kubenetes Security
+
+- Snyk CLI
+- Always update Kubernetes
+- Kubernetes Hardening Guide
+
+## What's Next?
+
+- cncf.io
+- Master Cloud-Native Infrastracture with Kubernetes
+- KubeCon videos
+- Linux Foundation Kubernetes Certification Exams
+1. Kubernetes and Cloud-Native Associate exam
+2. Certified Kubernetes Application Developer exam
+3. Certified Kubernetes Administrator exam
