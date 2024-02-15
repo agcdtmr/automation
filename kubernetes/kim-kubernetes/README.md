@@ -643,14 +643,20 @@ kubectl apply -f busybox.yaml
 deployment.apps/busybox created
 ```
 
-- check and see that the BusyBox Pod is up and running
+- [x] check and see that the BusyBox Pod is up and running
 
+```
 kubectl get pods
+```
 
+```
 NAME READY STATUS RESTARTS AGE
 busybox-74b7c48b46-xsxr2 1/1 Running 0 4m47s
+```
 
-Notice in that last command, I didn't specify a name space, which is fine because if you don't, kubectl assumes you want the objects in the default name space.
+- [x] Notice in that last command, I didn't specify a name space, which is fine because if you don't, kubectl assumes you want the objects in the default name space.
+
+- [x] Use this command to show a more detailed info about the pods, including IP Address
 
 kubectl get pods -n development -o wide
 NAME READY STATUS RESTARTS AGE IP NODE NOMINATED NODE READINESS GATES
@@ -658,8 +664,13 @@ pod-info-deployment-7587d5cc86-5r2xm 0/1 CrashLoopBackOff 31 (5m13s ago) 146m 10
 pod-info-deployment-7587d5cc86-7xlrd 0/1 CrashLoopBackOff 31 (5m4s ago) 146m 10.244.0.9 minikube <none> <none>
 pod-info-deployment-7587d5cc86-g2mb8 0/1 Error 32 (5m14s ago) 146m 10.244.0.8 minikube <none> <none>
 
-kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
+- [x] Use exec command to use shell to connect to the pods server
 
+```
+kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
+```
+
+```
 / # wget
 
 / # wget 10.244.0.10
@@ -672,35 +683,39 @@ wget: can't connect to remote host (10.244.0.10): Connection refused
 Connecting to 10.244.0.10:3000 (10.244.0.10:3000)
 
 / # exit
+```
 
 Tool: Application logs
 
+```
 kubectl get pods -n development
+```
 
+```
 NAME READY STATUS RESTARTS AGE
-pod-info-deployment-7587d5cc86-5r2xm 0/1 CrashLoopBackOff 38 (4m27s ago) 3h8m
-pod-info-deployment-7587d5cc86-7xlrd 0/1 CrashLoopBackOff 38 (4m25s ago) 3h8m
-pod-info-deployment-7587d5cc86-g2mb8 0/1 CrashLoopBackOff 38 (4m22s ago) 3h8m
+pod-info-deployment-7587d5cc86-5r2xm 1/1 Running 38 (4m27s ago) 3h8m
+pod-info-deployment-7587d5cc86-7xlrd 1/1 Running 38 (4m25s ago) 3h8m
+pod-info-deployment-7587d5cc86-g2mb8 1/1 Running 38 (4m22s ago) 3h8m
+```
 
+```
 kubectl logs <pod name> -n development
+```
 
 ex.
 kubectl logs pod-info-deployment-7587d5cc86-5r2xm -n development
 
 ## Deploy another application
 
-Create a new deployment in a file called quote.yaml.
-Name the deployment and name the app label quote-service.
-Use the development namespace.
-Name the container quote-container.
-Run two replicas.
-Use the image datawire/quote:0.5.0.
-Set the container to accept traffic at port 8080.
-Create the pods using kubectl apply -f quote.yaml.
-
-Optional and it's quite a stretch.
-
-- To use BusyBox to test that the application can accept traffic from inside the cluster.
+- [x] Create a new deployment in a file called quote.yaml.
+- [x] Name the deployment and name the app label quote-service.
+- [x] Use the development namespace.
+- [x] Name the container quote-container.
+- [x] Run two replicas.
+- [x] Use the image datawire/quote:0.5.0.
+- [x] Set the container to accept traffic at port 8080.
+- [x] Create the pods using `kubectl apply -f quote.yaml`.
+- [x] Optional and it's quite a stretch. Use BusyBox to test that the application can accept traffic from inside the cluster.
 
 ```
 ---
@@ -741,6 +756,7 @@ spec:
                   fieldPath: status.podIP
 ```
 
+```
 % kubectl apply -f quote.yaml
 deployment.apps/quote-service-deployment created
 
@@ -758,3 +774,4 @@ kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
 whoami
 wget 10.244.0.14:8080
 cat index.html
+```
