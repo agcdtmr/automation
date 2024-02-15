@@ -312,3 +312,164 @@ namespace "production" deleted
 ### Let's deploy an application
 
 In this mini project, Kubernetes Deployment configuration is written in YAML, and it's defining how to run a set of three instances (replicas) of a containerized application called "pod-info-app
+
+What are pods? Pods are the Kubernetes resource that run our applications and microservices, and one way to ensure that an application is highly available is to organize your Pods using a Kubernetes deployment.
+
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-deployment
+  namespace: development
+  labels:
+    app: pod-info
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pod-info
+  template:
+    metadata:
+      labels:
+        app: pod-info
+    spec:
+      containers:
+        - name: pod-info-container
+          image: kimschles/pod-info-app:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+
+```
+
+- [x] make sure we have the development namespace
+
+```
+kubectl get namespaces
+```
+
+Output:
+
+```
+NAME STATUS AGE
+default Active 22h
+kube-node-lease Active 22h
+kube-public Active 22h
+kube-system Active 22h
+```
+
+- [x] If not create a yaml file and run:
+
+```
+kubectl apply -f <yaml file name>
+```
+
+yaml file
+
+```
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+```
+
+- [x] To confirm:
+
+```
+kubectl get namespaces
+```
+
+Output:
+
+```
+NAME STATUS AGE
+default Active 23h
+deployment Active 12m
+development Active 60m
+kube-node-lease Active 23h
+kube-public Active 23h
+kube-system Active 23h
+production Active 12m
+```
+
+- [x] create the deployment
+
+```
+kubectl apply -f deployment.yaml
+```
+
+Output:
+
+```
+deployment.apps/pod-info-deployment created
+```
+
+- [x] confirm by listing all the deployments in the development namespace with the command
+
+```
+kubectl get deployments -n development
+```
+
+Output:
+
+```
+NAME READY UP-TO-DATE AVAILABLE AGE
+pod-info-deployment 3/3 3 0 17m
+```
+
+- [x] see the Pods that the deployment created
+
+```
+kubectl get pods -n development
+```
+
+Output:
+
+```
+NAME READY STATUS RESTARTS AGE
+pod-info-deployment-7587d5cc86-jt78j 1/1 Running 8 (2m35s ago) 19m
+pod-info-deployment-7587d5cc86-lfljm 1/1 Running 8 (2m34s ago) 19m
+pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
+```
+
+- [x] Let's delete one pod
+
+```
+kubectl delete pod pod-info-deployment-7587d5cc86-jt78j -n development
+```
+
+Output:
+
+```
+pod "pod-info-deployment-7587d5cc86-jt78j" deleted
+```
+
+- [x] Check if the Kubernetes deployment, make sure that there's always three Pod info deployment Pods running (3 because we set replicas to 3)
+
+```
+kubectl get pods -n development
+```
+
+Output:
+
+```
+NAME READY STATUS RESTARTS AGE
+pod-info-deployment-7587d5cc86-jt78j 1/1 Terminating 8 (2m35s ago) 19m
+pod-info-deployment-7587d5cc86-fddse 1/1 Running 8 (2m34s ago) 19m
+pod-info-deployment-7587d5cc86-lfljm 1/1 Running 8 (2m34s ago) 19m
+pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
+```
