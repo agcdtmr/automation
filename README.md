@@ -2,9 +2,8 @@
 
 Currently learning:
 
-- [ ] [Learning Docker](https://github.com/agcdtmr/automation/blob/main/docker/docker.md)
-- [ ] [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
-- [ ] [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
+- [x] [Kubernetes]()
+
 
 Check out my progress:
 - [x] [Jenkins Fundamentals](https://github.com/agcdtmr/automation/blob/main/jenkins-fundamentals.md)
@@ -13,6 +12,9 @@ Check out my progress:
 - [ ] [Gitlab](https://github.com/agcdtmr/automation/blob/main/gitlab.md)
 - [ ] [GitLab Jenkins Integration](https://github.com/agcdtmr/automation/blob/main/gitLab-jenkins-integration.md)
 - [ ] [NetOps (DevOps for Network Engineers): Automating Networks](https://github.com/agcdtmr/automation/blob/main/netops.md)
+- [ ] [Learning Docker](https://github.com/agcdtmr/automation/blob/main/docker/docker.md)
+- [ ] [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
+- [ ] [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
 
 
 
