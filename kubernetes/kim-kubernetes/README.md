@@ -28,11 +28,11 @@ What is Cloud Native Technologies?
 
 ## What I needed:
 
-Computer with Windows, Linux, or macOS
-Internet access
-Terminal
-Know simple Unix commands: cd, mkdir
-High-level understanding of container technology
+- Computer with Windows, Linux, or macOS
+- Internet access
+- Terminal
+- Know simple Unix commands: cd, mkdir
+- High-level understanding of container technology
 
 ## Questions
 
