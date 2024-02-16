@@ -318,7 +318,7 @@ metadata:
 kubectl apply -f <name of this .yaml file>
 ```
 
-Output:
+Sample Output: 
 `namespace/development created`
 
 - [x] To confirm:
@@ -327,7 +327,7 @@ Output:
 kubectl get namespaces
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME              STATUS   AGE
@@ -359,7 +359,7 @@ metadata:
 kubectl apply -f <name of this .yaml file>
 ```
 
-Output:
+Sample Output: 
 `namespace/development unchanged
 namespace/production created`
 
@@ -369,7 +369,7 @@ namespace/production created`
 kubectl get namespaces
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME              STATUS   AGE
@@ -387,7 +387,7 @@ production        Active   35s
 kubectl delete -f <name of this .yaml file>
 ```
 
-Output:
+Sample Output: 
 
 ```
 namespace "development" deleted
@@ -446,7 +446,7 @@ spec:
 kubectl get namespaces
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME STATUS AGE
@@ -478,7 +478,7 @@ metadata:
 kubectl get namespaces
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME STATUS AGE
@@ -497,7 +497,7 @@ production Active 12m
 kubectl apply -f deployment.yaml
 ```
 
-Output:
+Sample Output: 
 
 ```
 deployment.apps/pod-info-deployment created
@@ -509,7 +509,7 @@ deployment.apps/pod-info-deployment created
 kubectl get deployments -n development
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME READY UP-TO-DATE AVAILABLE AGE
@@ -522,7 +522,7 @@ pod-info-deployment 3/3 3 0 17m
 kubectl get pods -n development
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME READY STATUS RESTARTS AGE
@@ -537,7 +537,7 @@ pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
 kubectl delete pod pod-info-deployment-7587d5cc86-jt78j -n development
 ```
 
-Output:
+Sample Output: 
 
 ```
 pod "pod-info-deployment-7587d5cc86-jt78j" deleted
@@ -549,7 +549,7 @@ pod "pod-info-deployment-7587d5cc86-jt78j" deleted
 kubectl get pods -n development
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME READY STATUS RESTARTS AGE
@@ -569,7 +569,7 @@ Most issues with pods occur in the first minute of their life cycle. The beginni
 kubectl get pods -n development
 ```
 
-Output:
+Sample Output: 
 
 ```
 NAME READY STATUS RESTARTS AGE
@@ -582,7 +582,7 @@ pod-info-deployment-7587d5cc86-pkhbm 1/1 Running 8 (2m31s ago) 19m
 
 kubectl describe pod <pod name> -n <namespace>
 
-Unhealthy pod sample:
+Unhealthy pod Sample Output:
 
 ```
 Name:             pod-info-deployment-7587d5cc86-5r2xm
@@ -706,6 +706,7 @@ deployment.apps/busybox created
 kubectl get pods
 ```
 
+Sample Output: 
 ```
 NAME READY STATUS RESTARTS AGE
 busybox-74b7c48b46-xsxr2 1/1 Running 0 4m47s
@@ -715,11 +716,14 @@ busybox-74b7c48b46-xsxr2 1/1 Running 0 4m47s
 
 - [x] Use this command to show a more detailed info about the pods, including IP Address
 
+Sample Output: 
+```
 kubectl get pods -n development -o wide
 NAME READY STATUS RESTARTS AGE IP NODE NOMINATED NODE READINESS GATES
 pod-info-deployment-7587d5cc86-5r2xm 0/1 CrashLoopBackOff 31 (5m13s ago) 146m 10.244.0.10 minikube <none> <none>
 pod-info-deployment-7587d5cc86-7xlrd 0/1 CrashLoopBackOff 31 (5m4s ago) 146m 10.244.0.9 minikube <none> <none>
 pod-info-deployment-7587d5cc86-g2mb8 0/1 Error 32 (5m14s ago) 146m 10.244.0.8 minikube <none> <none>
+```
 
 - [x] Use exec command to use shell to connect to the pods server
 
@@ -727,6 +731,7 @@ pod-info-deployment-7587d5cc86-g2mb8 0/1 Error 32 (5m14s ago) 146m 10.244.0.8 mi
 kubectl exec -it busybox-74b7c48b46-xsxr2 -- /bin/sh
 ```
 
+Sample Output:
 ```
 / # wget
 
@@ -748,6 +753,7 @@ Tool: Application logs
 kubectl get pods -n development
 ```
 
+Sample Output: 
 ```
 NAME READY STATUS RESTARTS AGE
 pod-info-deployment-7587d5cc86-5r2xm 1/1 Running 38 (4m27s ago) 3h8m
@@ -813,6 +819,7 @@ spec:
                   fieldPath: status.podIP
 ```
 
+Sample Output: 
 ```
 % kubectl apply -f quote.yaml
 deployment.apps/quote-service-deployment created
@@ -841,13 +848,16 @@ cat index.html
 
 - Make sure you install and start your minikube then run:
 
+```
 minikube tunnel
-
+```
 
 
 - Create a yaml file and run:
 
+```
 kubectl apply -f service.yaml       
+```
 
 yaml file
 ```
@@ -872,6 +882,7 @@ spec:
 kubectl get services -n development
 ```
 
+Sample Output: 
 ```
 NAME           TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 demo-service   LoadBalancer   10.109.29.96   127.0.0.1     80:32074/TCP   5m1s
@@ -883,6 +894,7 @@ demo-service   LoadBalancer   10.109.29.96   127.0.0.1     80:32074/TCP   5m1s
 minikube tunnel
 ```
 
+Sample Output: 
 ```
 ✅  Tunnel successfully started
 
@@ -944,23 +956,36 @@ spec:
                 fieldPath: status.podIP
 ```
 
-kubectl apply -f deployment.yaml                                           
-deployment.apps/pod-info-deployment created
+```
+kubectl apply -f deployment.yaml
+```
 
+Sample Output: 
+```
+deployment.apps/pod-info-deployment created
+```
+
+```
 kubectl get pods -n development
+```
+
+Sample Output: 
+```
 NAME                                   READY   STATUS    RESTARTS   AGE
 pod-info-deployment-7d75675b59-xt724   1/1     Running   0          45s
+```
 
 ## Delete your Kubernetes objects and tear down your cluster
 
+```
 kubectl delete -f busybox.yaml
 kubectl delete -f deployment.yaml
 kubectl delete -f quote.yaml 
 kubectl delete -f service.yaml
 kubectl delete -f loadbalancer.yaml 
 kubectl delete -f namespace.yaml   
-
 minikube delete
+```
 
 ## The Kubernetes control plane
 
