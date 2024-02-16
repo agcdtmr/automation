@@ -89,14 +89,16 @@ metadata:
 - What is the immediate parent of the following line? containerPort: 8080... ports:
 
 - Your deployment YAML has the following configuration. What should your service YAML include so traffic is directed properly?
+
+<!-- ---
 metadata:
   labels:
-    app: pod-info
+    app: pod-info -->
 
-
+<!-- ---
 spec:
   selector:
-    app: pod-info
+    app: pod-info -->
 
 - What is not a type of service that Kubernetes offers? AddressPool is not a service type that Kubernetes supports.
 
