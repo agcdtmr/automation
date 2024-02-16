@@ -24,7 +24,7 @@ What is container technology
 The nautical themes used to communicate about Kubernetes and Docker, the logo for Kubernetes is the helm of a ship, because Kubernetes is the Greek word for ship's captain. Docker uses shipping containers and whales to visually communicate what it does. Docker's mascot, Moby Dock, is a cartoon whale that hauls shipping containers on its back, and I suppose he would deliver those containers to the ship that is being piloted by Kubernetes. Anyway, containers have become a popular way to package and start applications and services, and Kubernetes is the most popular way to manage production applications.
 
 What is Cloud Native Technologies?
-Cloud native technologies are open-source projects designed to let technologists use cloud computing services to automatically deploy and scale applications.
+- Cloud native technologies are open-source projects designed to let technologists use cloud computing services to automatically deploy and scale applications.
 
 ## What I needed:
 
