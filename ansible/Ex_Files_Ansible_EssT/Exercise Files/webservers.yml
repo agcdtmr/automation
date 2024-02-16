@@ -8,3 +8,11 @@
        name: testpackage
        state: absent
        update_cache: yes
+
+
+# This playbook notice will run against the web servers hosts group, and we will assume root 
+# privileges. So we'll do the equivalent of a sudu. And we do that because what we're going 
+# to be doing is using the apt package against these Ubuntu systems in order to make sure a test 
+# package is uninstalled. So the state absent is going to make sure that uninstallation of desk 
+# package is performed. If it's there and look at this, we also update the cache. So we get new 
+# definitions of the repositories that are available to app
