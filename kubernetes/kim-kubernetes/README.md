@@ -1045,6 +1045,9 @@ The Kube-proxy makes sure that your pods and services can communicate with other
 
 ## How the control plane and worker node work together to create a pod
 
+![image](https://github.com/agcdtmr/automation/assets/112581827/955974a8-c21a-49e0-8a1a-9734ed46ea02)
+
+
 ## Kubenetes Security
 
 - Snyk CLI
