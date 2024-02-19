@@ -37,3 +37,12 @@ stateful - gmail
 
 
 
+## Interview Questions
+
+- https://www.fullstack.cafe/blog/kubernetes-interview-questions
+- https://github.com/sgnd/kubernetes-course
+- https://github.com/Divinreddy/Interview-Questions/blob/master/DevOPS
+- https://www.edureka.co/blog/interview-questions/kubernetes-interview-questions/
+- https://github.com/mamun001/kubernetes_interview_questions/blob/main/kubernetes_interview_questions.md
+- https://github.com/learning-zone/docker-and-kubernetes-basics/blob/master/kubernetes.md
+
