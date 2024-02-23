@@ -36,6 +36,46 @@ stateful - gmail
 
 
 
+##
+
+als een pod een andere entiteit is dan een container, kunnen er dan meerdere containers in 1 pod bestaan?
+
+Ma
+Marcel
+9:58 AM
+ja, er kunnen binnen 1 pod meerdere containers draaien
+
+Ru
+Ruben
+9:59 AM
+1 container in een pod = node ?
+
+Ma
+Marcel
+10:00 AM
+nee, een pod is een pod. En een pod draait op een node
+
+op een node kunnen meerdere pods draaien
+
+Ru
+Ruben
+10:00 AM
+ok, een node is een server in de kubernetes cluster
+
+Ma
+Marcel
+10:00 AM
+ja, zo kun je het zien inderdaad
+
+
+---------
+Matthias
+10:02 AM
+Volgens mij was deployment-config eerst iets typisch voor openshift en bestaat niet in kubernetes. Uiteindelijk heeft kubernetes iets vergelijkbaars gemaakt met "deployment". En volgens mij is "deployment" de open standaard die hetzelfde is voor openshift en kubernetes. (weet ik niet helemaal zeker trouwens)
+---------
+
+alles is object in Kubernetes
+
 
 ## Interview Questions
 
