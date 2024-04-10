@@ -2,8 +2,10 @@
 
 Currently learning:
 
-- [x] [Kubernetes](https://github.com/agcdtmr/automation/tree/main/kubernetes/kim-kubernetes)
-- [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
+- [Django with Docker](https://www.youtube.com/watch?v=FYZ2wytNX4U)
+- [Docker Mastery with Django](https://www.youtube.com/playlist?list=PLOLrQ9Pn6cazCfL7v4CdaykNoWMQymM_C)
+
+
 
 
 Check out my progress:
@@ -15,7 +17,8 @@ Check out my progress:
 - [ ] [Learning Docker](https://github.com/agcdtmr/automation/blob/main/docker/docker.md)
 - [ ] [Docker Essential Training](https://www.linkedin.com/learning/docker-essential-training/diving-deeper-into-docker?u=2080948)
 - [ ] [Docker: Continuous Delivery](https://www.linkedin.com/learning/docker-continuous-delivery/welcome?u=2080948)
-
+- [x] [Kubernetes](https://github.com/agcdtmr/automation/tree/main/kubernetes/kim-kubernetes)
+- [ ] [Ansible](https://github.com/agcdtmr/automation/blob/main/ansible.md)
 
 
 Planning to do:
