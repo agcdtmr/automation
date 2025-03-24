@@ -2,9 +2,7 @@
 
 Currently learning:
 
-- [Django with Docker](https://www.youtube.com/watch?v=FYZ2wytNX4U)
-- [Docker Mastery with Django](https://www.youtube.com/playlist?list=PLOLrQ9Pn6cazCfL7v4CdaykNoWMQymM_C)
-
+- [100 Days Of Cloud DevOps Challenge](https://github.com/agcdtmr/100DaysOfCloudDevOps)
 
 
 
